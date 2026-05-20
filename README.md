@@ -630,14 +630,6 @@ INTERNAL_API_SECRET=
 - Patient Care & Guidance from approved clinical outputs​
 - Post-visit education and contextual follow-up Q&A​
 
-## Team Name - WNS Vuram Health Agent 
-**Team Members**
-- Bhargav Parnandi
-- Manish Kumar
-- Gopinath S
-- Sakthiprabha M
-- Arunkumar M
-- Nagarasu P
 
 ---
 
