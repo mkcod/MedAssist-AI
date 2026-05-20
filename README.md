@@ -27,7 +27,7 @@
 
 ## Architecture
 ### Technical Solution 
-![MedAssist Technical Solution Diagram](https://github.com/Cloudlabs-Enterprises/MediAssist-AI-WNSVuram-HA/blob/main/Docs/Arch-Diag.png)
+![MedAssist Technical Solution Diagram](https://github.com/mkcod/MedAssist-AI/blob/main/Docs/Arch-Diag.png)
 
 - Real-time, streaming medical speech recognition with speaker separation​
 - AI/ML and GenAI pipelines for clinical entity extraction and summarization​
@@ -35,7 +35,7 @@
 - Secure integration with EHR and downstream systems post-approval​
 
 ### Functional Solution 
-![MedAssist Functional Solution Diagram](https://github.com/Cloudlabs-Enterprises/MediAssist-AI-WNSVuram-HA/blob/main/Docs/Func-Soln.png)
+![MedAssist Functional Solution Diagram](https://github.com/mkcod/MedAssist-AI/blob/main/Docs/Func-Soln.png)
 
 - Passive speech-to-text captures conversation without disrupting the visit​
 - AI extracts symptoms, context, and next steps from natural dialogue​
