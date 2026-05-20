@@ -1,31 +1,19 @@
 # MediAssist-AI
-
-An AI-powered healthcare management platform combining a React frontend, Node.js REST API, and a suite of Python-based AI agents — deployed on Azure.
-
----
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Architecture](#architecture)
-- [Technology Stack](#technology-stack)
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Prerequisites](#prerequisites)
-- [Local Development Setup](#local-development-setup)
-- [Running All Services](#running-all-services)
-- [Deployment](#deployment)
-- [One-Click Azure Deployment](#one-click-azure-deployment)
-- [API Reference](#api-reference)
-- [Environment Variables](#environment-variables)
-- [Database Schema](#database-schema)
-- [Troubleshooting](#troubleshooting)
-
----
-
+## Voice-first · Privacy-native · Clinician-approved​
 ## Overview
-
-MediAssist-AI streamlines healthcare operations for patients, doctors, receptionists, and attendees. It provides appointment and medication management, secure medical record storage, real-time vitals tracking, and AI-driven clinical insights via conversational and summarization agents.
+- Passively captures the complete patient-clinician conversation in realtime using AI to generate diarized transcripts, structured clinical documentation and actionable outputs.​
+- A privacy-first convert & purge design ensures PHI is securely handled - no audio retention. All outputs are available only for clinician review and approval.​
+- An AI-powered healthcare management platform combining a React frontend, Node.js REST API, and a suite of Python-based AI agents — deployed on Azure.
+## Business Challenges
+- Physicians spend significant time on documentation, reducing time available for patient care​
+- Clinical conversations contain valuable context that is often lost or inconsistently recorded​
+- Manual note-taking introduces variability, omissions, and clinician burnout​
+- Strict regulatory constraints limit audio retention and data reuse
+## Use Case Description
+- Passively listens to the full patient–doctor interaction during the clinical encounter​
+- Converts spoken conversation into structured clinical documentation and action plans​
+- Filters non-clinical dialogue while preserving medically relevant context and intent​
+- Presents a summarized report for physician review, edit, and formal approval​
 
 **Core capabilities:**
 - Multi-role authentication and role-based access control
@@ -38,7 +26,28 @@ MediAssist-AI streamlines healthcare operations for patients, doctors, reception
 ---
 
 ## Architecture
+### Technical Solution 
+![MedAssist Technical Solution Diagram](https://github.com/Cloudlabs-Enterprises/MediAssist-AI-WNSVuram-HA/blob/main/Docs/Arch-Diag.png)
 
+- Real-time, streaming medical speech recognition with speaker separation​
+- AI/ML and GenAI pipelines for clinical entity extraction and summarization​
+- Ephemeral processing with strict convert-and-delete enforcement​
+- Secure integration with EHR and downstream systems post-approval​
+
+### Functional Solution 
+![MedAssist Functional Solution Diagram](https://github.com/Cloudlabs-Enterprises/MediAssist-AI-WNSVuram-HA/blob/main/Docs/Func-Soln.png)
+
+- Passive speech-to-text captures conversation without disrupting the visit​
+- AI extracts symptoms, context, and next steps from natural dialogue​
+- Auto-generates structured documentation and action items​
+- Physician reviews, edits, and approves before downstream consumption
+
+### Business Impact
+- Frees clinician capacity to focus on patient care rather than administrative tasks​
+- Lowers operational inefficiencies from rework and incomplete notes​
+- Supports compliance through standardized, review-based documentation​​
+
+### Technical Implementation
 ```
 ┌──────────────────────────────────────────────┐
 │         Frontend  (React + Vite SPA)         │
@@ -617,31 +626,19 @@ INTERNAL_API_SECRET=
 
 ---
 
-## Troubleshooting
+## Future Phase
+- Patient Care & Guidance from approved clinical outputs​
+- Post-visit education and contextual follow-up Q&A​
 
-| Symptom | Likely Cause | Fix |
-|---------|-------------|-----|
-| `ECONNREFUSED` on startup | Cosmos DB unreachable | Check connection string; verify IP allowlist in Azure portal |
-| CORS errors in browser | `FRONTEND_URL` mismatch | Set `FRONTEND_URL` in backend `.env` to match the React dev server origin |
-| File upload fails | Storage config missing | Verify `AZURE_STORAGE_CONNECTION_STRING` and container name |
-| `Invalid token` / 401 | JWT secret mismatch or expiry | Ensure `JWT_SECRET` is identical across restarts; re-login to obtain a fresh token |
-| Orchestrator 500 errors | Agent `.env` incomplete | Confirm all Azure OpenAI and Search keys are set in `orchestrator_agent/.env` |
-| Port already in use | Stale process | `lsof -i :<PORT>` then `kill <PID>` |
-| App Service exit code 127 | startup.sh command not found | `startup.sh` must be at `/home/site/wwwroot/startup.sh`; `deploy-all.sh` copies it from the repo root — do not inline-embed startup logic |
-| `ERROR: /root/site/wwwroot/backend not found` in startup.log | Wrong `WWWROOT` path | Container `$HOME=/root`, but files live at `/home/site/wwwroot`. The startup script hard-codes `WWWROOT="/home/site/wwwroot"` to avoid this |
-| Container killed after ~230s (`ContainerTimeout`) | pip install blocking warmup probe | Python deps are installed in a background subshell; Node.js starts first. If you see this, ensure your deployed `startup.sh` is the one from the repo root (the Node-first version) |
-| API endpoints return 503 immediately after cold start | DB not yet connected (degraded mode) | Key Vault references may take a few seconds to resolve on first boot. The app starts in degraded mode and self-recovers; retry after ~30s |
+## Team Name - WNS Vuram Health Agent 
+**Team Members**
+- Bhargav Parnandi
+- Manish Kumar
+- Gopinath S
+- Sakthiprabha M
+- Arunkumar M
+- Nagarasu P
 
 ---
 
-## Security Notes
-
-- Never commit `.env` files — use `.env.example` as the template.
-- Use **Azure Key Vault** for all production secrets; reference via Managed Identity (no credentials in App Service config).
-- `JWT_SECRET` must be a cryptographically random string (≥ 32 chars) in production.
-- Rate limiting, Helmet security headers, and input validation are pre-configured in Express.
-- For any production deployment handling real patient data, ensure HIPAA compliance.
-
----
-
-**Version:** 1.2.0 | **Status:** Active Development | **Last Updated:** 2026-05-13
+**Version:** 1.2.0 | **Status:** Azure Go-Live | **Last Updated:** 2026-05-13
