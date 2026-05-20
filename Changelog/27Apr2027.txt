@@ -1,0 +1,29 @@
+--BOTTOM TO TOP-- CHANGES DONE by CLAUDE GITHUB COPILOT
+
+in the SOAP Record Tab - Only doctor-approved SOAP records are visible here. Generate a new SOAP record by using the AI Assistant page.. replace AI Assistant with AI Conversation
+transcript history should be one line only per conversation and once i have more than 2 transcript history the above section is getting clipped vertically, the above section is main section, it should never be clipped
+in AI Conversation Tab top left it says AI Voice Assistant - it should be AI Conversation Capture
+
+after recording done in front end and processing done, only one button mic button should be visible, clicking which should start a new recording session, remove the redundant new recording button after processing.
+while processing is happening, still at the bottom it says pipeline processing.
+
+Dr. Dr. Priya two times Dr. coming everywhere in frontend UI.
+Quality check to be done in summarizer agent itself and if conversation does not capture significant symptoms (1 or more) then do not go to next stage and return quality check failure error (less than 1 symptom detected) 
+front end AI Chat tab processing showing AI Pipeline and agent names in the processing, optimize for patient level terminology not technical.
+
+did you check and optimize all the system prompts for the python agents?
+
+qa check the entire codebase for performance check and optimization
+
+
+Rename AI Assistant > AI Conversation - and inside the tab make it AI Conversation Capture, Record your conversation now. 
+also, while processing - show explicitly after summarizer agent , one additional step - conversation purged as we are purging the transcript after that and not storing it anywhere in the system. 
+
+Purge the transcript after summarizer process it.
+Do not show transcript anywhere in the document/report
+Disable Edit button after approve
+instead of drop down opening of the SOAP records, make it open on click of the entire section
+rename SOP records to SOAP records
+investigage subjective section of SOAP records as the whole transcript is coming in the report
+add time along with date in the SOAP item header
+Add "ICD Code: " text before the ICD Code Tag

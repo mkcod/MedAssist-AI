@@ -1,0 +1,154 @@
+Here's a summary of all changes made in this session:
+
+---
+
+**startup.sh** (2 fixes)
+- Fixed `WWWROOT` path: changed `"${HOME}/site/wwwroot"` → `"/home/site/wwwroot"` (container `$HOME=/root`, not home)
+- Restructured startup order: Node.js now starts **immediately** (satisfies the 230s warmup probe); all Python work (venv creation, `pip install`, `.env` file writing, `uvicorn` launch) moved into a background subshell with `set +e` so Python failures are non-fatal
+
+**app.js** (1 fix)
+- `start()` no longer calls `process.exit(1)` when `connectDB()` fails; instead the server starts in **degraded mode** and logs a warning — API endpoints fail gracefully until the DB connection is available
+
+**deploy-all.sh** (1 fix)
+- Replaced the inline startup script heredoc (Step 5) with `cp "$SCRIPT_DIR/startup.sh" "$DEPLOY_PKG_DIR/startup.sh"` — single source of truth, eliminates drift between the embedded copy and the repo file
+
+**README.md** (3 additions)
+- Added `az webapp log download` command to the **Verify deployment** section
+- Added **App Service startup sequence** section documenting the Node-first strategy, background Python install timeline, and degraded-mode DB behavior
+- Added 4 new rows to the **Troubleshooting** table: exit code 127, wrong `WWWROOT` path, `ContainerTimeout` from pip blocking the warmup probe, and 503 on cold start (degraded mode)
+- Bumped version `1.1.0` → `1.2.0`
+
+Here's a summary of everything done in this session:
+
+- **Checked git status** — confirmed you were on the `dev` branch with uncommitted changes (main.bicep, README.md, plus untracked files like deploy-all.sh, startup.sh, `.env.production`)
+- **Identified .gitignore** — confirmed sensitive files (`.env.production`, .deploy_pkg.zip, .deploy_pkg) were already gitignored, so no secrets would be pushed
+- **Force-replaced `main` with `dev`** on GitHub:
+  - Switched to `main`
+  - Reset it to exactly match `dev` (`git reset --hard dev`)
+  - Force-pushed to `origin/main` (updated `13de16f` → `d49fa2d`)
+- **Returned to `dev` branch** as the working branch
+
+**Changes made in this session:**
+
+**Backend/Medassist-Backend (Node.js)**
+- src/config/database.js — Added `getSecret` import from keyVault.js; fallback to Key Vault for `COSMOS_DB_CONNECTION_STRING` if not in env
+- src/config/keyVault.js — Added `loadAllSecrets()` function that bulk-loads all Key Vault secrets into `process.env` at startup
+- src/app.js — Imported `loadAllSecrets`; called it before `connectDB()` so all secrets (JWT, Cosmos, etc.) are available before routes load
+- src/routes/orchestrator.js — Replaced module-level `const INTERNAL_API_SECRET` with lazy `getInternalSecret()` function so Key Vault value is used at request time
+
+**Backend/orchestrator_agent (Python)**
+- .env — Filled in `AZURE_KEY_VAULT_URI`, SP credentials, and OpenAI endpoint (replacing `REPLACE_` placeholders)
+- Installed `azure-keyvault-secrets` and `azure-identity` packages into the venv (missing, causing Key Vault to be skipped)
+
+**Backend/conversational_agent (Python)**
+- main.py — Added `load_secrets_from_keyvault()` call after `load_dotenv`
+- server.py — Added `load_secrets_from_keyvault()` call after `load_dotenv`
+- .env — Added `SPEECH_REGION=eastus` (non-secret config not in Key Vault)
+
+**Backend/summarizer_agent (Python)**
+- rag_pipeline.py — Added `logger = logging.getLogger(__name__)` (was missing, causing `NameError`)
+- rag_pipeline.py — Added `from retrieval import retrieve_top_k` (missing import causing `NameError`)
+- rag_pipeline.py — Replaced `max_tokens` with `max_completion_tokens` in all 4 LLM API calls (Phi-4-mini-instruct requires the newer parameter)
+
+Here's a summary of everything done in this session:
+
+**Azure Blob Storage — file upload**
+- Diagnosed missing `AZURE_STORAGE_CONNECTION_STRING` in `summarizer_agent/.env` as root cause of blob access failures
+- Identified the storage account as `stmedassiste8976d87` in resource group `mediassist-ai-rg`
+- Troubleshot Portal upload failure — firewall was already open, root cause was CORS; CORS fix still failed due to browser-level restrictions
+- Retrieved storage account key via `az storage account keys list`
+- Successfully uploaded `section111_valid_icd10_october2025.csv` from data to blob container `az-medassistai-container2` using `az storage blob upload --account-key`
+
+**Pending / still needed**
+- `icd_10_cm_october_2025_guidelines_0.pdf` still needs to be uploaded to `az-medassistai-container1` (file not found in workspace)
+- `AZURE_STORAGE_CONNECTION_STRING` should be added to .env so the ingest scripts (ingest_blob_to_search.py, ingest_csv_to_search.py) can run locally
+
+Here's a summary of all changes made in this session:
+
+**Azure Search Index (create_index_sample.json)**
+- Removed unused fields: `title`, `chunk_id`
+- Added missing fields required by retrieval.py: `condition`, `icd_code` (string), `description`, `symptom`
+- Renamed vector field `contentVector` → `embedding` (matches `"fields": "embedding"` in the retrieval vector query)
+- Fixed `dimensions`: `1536` → `3072` to match the `text-embedding-3-large` model actually deployed
+- Removed `@odata.etag` and `purviewEnabled` (invalid in create/PUT payloads)
+- Set `sortable: false` on all analyzer-backed fields (Azure Search rejects `sortable: true` on language-analyzed fields)
+
+**Deployment docs (deployment-requirements.txt)**
+- Updated embedding model reference from `text-embedding-3-small` → `text-embedding-3-large` (line 155)
+- Updated env var default `AZURE_OPENAI_EMBEDDING_DEPLOYMENT=text-embedding-3-small` → `text-embedding-3-large` (line 304)
+
+**RAG pipeline (rag_pipeline.py)**
+- Increased `max_completion_tokens` in `generate_action_plan_llm` from `200` → `600` to prevent JSON truncation on 5-item action plans
+
+> **Heads-up:** A secret key was visible in your terminal history (`az keyvault secret set ... --value "FrL0fFN..."`). If that value is a real Azure OpenAI key, rotate it immediately in the Azure portal.
+
+Here's a summary of all changes made in this session:
+
+**rag_pipeline.py**
+- Moved `logger = logging.getLogger(__name__)` to immediately after `import logging` (before `from retrieval import retrieve_top_k`), so `logger` is always defined even if a later import fails partially
+
+**summ_tool.py**
+- Added full `traceback.format_exc()` logging in the `run_summarizer_agent` exception handler for better diagnostics when the RAG pipeline throws
+
+**.env**
+- Changed `ORCHESTRATION_DEPLOYMENT_NAME` from `gpt-5.4-mini` (non-existent deployment) to `Phi-4-mini-instruct` (the actual provisioned deployment)
+
+**.env.example**
+- Same fix: updated `ORCHESTRATION_DEPLOYMENT_NAME=gpt-5.4-mini` → `Phi-4-mini-instruct` to keep the example in sync
+
+Changes made in this conversation:
+
+- Added .DS_Store to .gitignore to prevent macOS Finder metadata files from being tracked by Git.
+
+Here's a summary of everything addressed in this chat:
+
+**CI/CD Pipeline Issues (main.yml)**
+
+- **OIDC login failure** (`AADSTS70025`): The Azure App Registration `MedAssist-AI` had no federated identity credential configured. Fix: add a federated credential in Azure AD with subject `repo:Cloudlabs-Enterprises/MediAssist-AI-WNSVuram-HA:ref:refs/heads/dev`.
+
+- **Empty Key Vault name** (`KV=""` → "URL has an invalid label"): The GitHub repository secret `AZURE_KEY_VAULT_NAME` was missing or empty. Fix: add all 4 required secrets (`AZURE_CLIENT_ID`, `AZURE_TENANT_ID`, `AZURE_SUBSCRIPTION_ID`, `AZURE_KEY_VAULT_NAME`) in **Settings → Secrets and variables → Actions**.
+
+- **Authorization failure on App Service** (`AuthorizationFailed` for `Microsoft.Web/sites/config/read`): The service principal (object ID `15322716-6d30-4f80-97f2-c1bb44fec89f`) lacked permissions. Fix: assign **Contributor** (or **Website Contributor**) role on the resource group/App Service, and **Key Vault Secrets User** on the Key Vault.
+
+**No workflow file changes were required** — all three issues were Azure configuration/permissions problems, not code issues.
+
+Here's a summary of all changes made in this session:
+
+**CI/CD Pipeline (main.yml)**
+- Added .env.example → `.env` copy steps in all three build jobs:
+  - `build-python-agents`: copies .env.example for `orchestrator_agent`, `summarizer_agent`, and `Publishing_Agent`
+  - `build-backend`: copies .env.example before `npm install`
+  - `build-frontend`: copies .env.example before the VITE URL injection
+- Added "Enable system-assigned Managed Identity & grant Key Vault access" step in the deploy job — runs `az webapp identity assign` and grants `Key Vault Secrets User` RBAC role to the App Service identity
+
+**Node.js Key Vault config (keyVault.js)**
+- Replaced `DefaultAzureCredential` with `ManagedIdentityCredential()` (no args = system-assigned) when running on App Service (detected via `WEBSITE_SITE_NAME`), falling back to `DefaultAzureCredential` locally — fixes the "No User Assigned or Delegated Managed Identity found" error caused by `AZURE_CLIENT_ID` being in app settings
+
+**Azure Key Vault (manual, via terminal)**
+- Granted `Key Vault Secrets Officer` role to the signed-in user (`e3c6af86-...`) on the vault
+- Added missing secret `OPENAI-API-KEY` to `kv-medai-e8976d87`
+
+Here's a summary of all changes made in this session:
+
+**orchestrator.js**
+
+- **Added missing declarations** — `PYTHON_AGENT_URL`, `getInternalSecret()`, `PYTHON_AGENT_READY_RETRIES`, `PYTHON_AGENT_READY_DELAY_MS`, `sleep()`, and `waitForPythonAgentReady()` were all absent, causing a `ReferenceError` 500 on every `/transcribe` call.
+
+- **Fixed `INTERNAL_API_SECRET` reference** — the transcribe route used an undefined constant; changed to `getInternalSecret()`.
+
+- **Fixed 403 on `/trigger`** — role guard was `patient`-only; doctors were blocked. Changed to `['patient', 'doctor']`.
+
+- **Replaced fake `runPipeline`** — the deployed version used `delay()` mocks and keyword-based `generateSOAPFromTranscript()`. Replaced with the real implementation that:
+  - Calls `PYTHON_AGENT_URL/run-pipeline` with the full payload
+  - Gracefully falls back to keyword extraction if Python is offline
+  - Normalises ICD-10 field names (`icd10_code` → `icd10Code`)
+  - Tracks both `patientId` and `initiatorId` on the job
+  - Emits `sop:new` and `notification:received` socket events to both doctor and patient
+
+- **Fixed `/status` endpoint** — only `patientId` was checked; doctors (initiators) got 403 polling their own jobs. Fixed to allow either `patientId` or `initiatorId`.
+
+- **Added `/agent-health` route** — was missing; proxies to Python `/health`.
+
+- **Added `/log` route** — was missing; receives real-time stage log events from Python and relays them via socket to both initiator and patient rooms.
+
+- **Removed dead code** — deleted `generateSOAPFromTranscript()`, the fake `delay()`-based `runPipeline`, the old duplicate status/cleanup block, and the duplicate `module.exports` that had been left after the prior partial edit.

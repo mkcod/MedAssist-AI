@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "session_id": "general-session-107",
+  "metadata": {
+    "source": "azure-speech-conversation-transcriber",
+    "language": "en-IN",
+    "created_at": "2026-04-17T19:40:00+05:30",
+    "audio_type": "real_time",
+    "diarization": true
+  },
+  "transcript": {
+    "utterances": [
+      {
+        "utterance_id": 1,
+        "speaker_id": "speaker_1",
+        "text": "Tell me what you are feeling.",
+        "start_time_ms": 0,
+        "duration_ms": 1300
+      },
+      {
+        "utterance_id": 2,
+        "speaker_id": "speaker_2",
+        "text": "I have dizziness on and off since morning.",
+        "start_time_ms": 1500,
+        "duration_ms": 2100
+      },
+      {
+        "utterance_id": 3,
+        "speaker_id": "speaker_1",
+        "text": "Any headache or blurred vision?",
+        "start_time_ms": 3800,
+        "duration_ms": 1500
+      },
+      {
+        "utterance_id": 4,
+        "speaker_id": "speaker_2",
+        "text": "Yes, there is headache and I felt slight blurred vision once.",
+        "start_time_ms": 5500,
+        "duration_ms": 2800
+      },
+      {
+        "utterance_id": 5,
+        "speaker_id": "speaker_1",
+        "text": "Do you have chest pain or fainting?",
+        "start_time_ms": 8500,
+        "duration_ms": 1500
+      },
+      {
+        "utterance_id": 6,
+        "speaker_id": "speaker_2",
+        "text": "No chest pain, no fainting.",
+        "start_time_ms": 10200,
+        "duration_ms": 1300
+      }
+    ]
+  }
+}

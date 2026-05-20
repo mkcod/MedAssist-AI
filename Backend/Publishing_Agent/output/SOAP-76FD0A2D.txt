@@ -1,0 +1,26 @@
+================================================================
+MEDASSIST SOAP CLINICAL DOCUMENT
+================================================================
+Record ID      : SOAP-76FD0A2D
+Patient ID     : UNKNOWN
+Generated Time : 2026-04-16T09:43:16.308518Z
+Confidence     : 86.0
+
+S - SUBJECTIVE
+----------------------------------------------------------------
+Patient reports skin rash, itching.
+
+O - OBJECTIVE
+----------------------------------------------------------------
+Clinical summary: Patient reports skin rash and itching which may indicate Dermatitis.
+
+A - ASSESSMENT
+----------------------------------------------------------------
+Symptoms and context suggest a possible clinical picture related to Dermatitis (reference code: L30) without confirming a diagnosis.
+
+P - PLAN
+----------------------------------------------------------------
+Take rest ; Drink plenty of fluids ; Monitor symptoms ; Consult a healthcare professional if symptoms persist
+
+Clinical note generated from validated SOAP JSON output for doctor review.
+================================================================

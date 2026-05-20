@@ -1,0 +1,16 @@
+test7_invalidcontent.txt
+Expected: "status": "blocked",
+  "reason": "Input is not sufficiently medical in context",
+
+{
+  "symptoms": ["slow performance", "high memory usage"],
+  "possible_condition": "System resource bottleneck",
+  "icd10_code": "N/A",
+  "action_plan": [
+    "Restart the application",
+    "Close unused programs",
+    "Check disk space",
+    "Monitor CPU and RAM usage"
+  ],
+  "clinical_summary": "User reports slow performance which may indicate a system resource bottleneck."
+}

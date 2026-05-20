@@ -1,0 +1,16 @@
+# Install all requirements from the three agents plus orchestrator needs
+azure-cognitiveservices-speech
+openai
+mcp
+python-dotenv
+pandas
+openpyxl
+fastapi
+uvicorn
+openai>=1.0.0
+agent-framework
+pytest
+mcp[cli]
+openai python-dotenv requests pypdf
+azure cosmos
+pymongo

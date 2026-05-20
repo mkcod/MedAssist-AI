@@ -1,0 +1,26 @@
+{
+  "@odata.context": "https://srch-mediassist-e8976d87.search.windows.net/$metadata#indexers/$entity",
+  "@odata.etag": "\"0x8DEB0F3A71F6283\"",
+  "name": "indexer-1778678913075",
+  "description": null,
+  "dataSourceName": "azureblob-1778678108415-datasource",
+  "skillsetName": null,
+  "targetIndexName": "az-med-cont1-index2",
+  "disabled": null,
+  "schedule": null,
+  "parameters": {
+    "batchSize": null,
+    "maxFailedItems": null,
+    "maxFailedItemsPerBatch": null,
+    "configuration": {
+      "dataToExtract": "contentAndMetadata",
+      "parsingMode": "delimitedText",
+      "firstLineContainsHeaders": true,
+      "delimitedTextDelimiter": ","
+    }
+  },
+  "fieldMappings": [],
+  "outputFieldMappings": [],
+  "cache": null,
+  "encryptionKey": null
+}

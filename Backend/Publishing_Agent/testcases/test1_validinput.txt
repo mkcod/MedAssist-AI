@@ -1,0 +1,16 @@
+# test1_validinput.txt
+Expected: Pass. Valid medical JSON, all required fields present, should generate the normal structured output.
+
+text
+{
+  "symptoms": ["fatigue"],
+  "possible_condition": "Postviral fatigue syndrome",
+  "icd10_code": "G93.3",
+  "action_plan": [
+    "Rest adequately",
+    "Drink fluids",
+    "Monitor symptoms",
+    "Consult a healthcare professional if symptoms persist"
+  ],
+  "clinical_summary": "Patient reports fatigue consistent with postviral fatigue syndrome."
+}

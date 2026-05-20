@@ -1,0 +1,25 @@
+================================================================
+MEDASSIST SOAP CLINICAL DOCUMENT
+================================================================
+Record ID      : SOAP-0E6DCC85
+Generated Time : 2026-04-16T12:30:31.577618Z
+Confidence     : 86.0
+
+S - SUBJECTIVE
+----------------------------------------------------------------
+Patient reports fatigue, headache, body ache.
+
+O - OBJECTIVE
+----------------------------------------------------------------
+Clinical summary: Patient reports fatigue, headache, and body ache consistent with an acute viral illness.
+
+A - ASSESSMENT
+----------------------------------------------------------------
+Symptoms and context suggest a possible clinical picture related to Acute viral illness (reference code: B34.9) without confirming a diagnosis.
+
+P - PLAN
+----------------------------------------------------------------
+Rest adequately ; Increase fluid intake ; Monitor temperature ; Seek medical attention if symptoms worsen
+
+Clinical note generated from validated SOAP JSON output for doctor review.
+================================================================

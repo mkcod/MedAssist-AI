@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "session_id": "respiratory-session-002",
+  "metadata": {
+    "source": "azure-speech-conversation-transcriber",
+    "language": "en-IN",
+    "created_at": "2026-04-17T09:10:00+05:30",
+    "audio_type": "real_time",
+    "diarization": true
+  },
+  "transcript": {
+    "utterances": [
+      {
+        "utterance_id": 1,
+        "speaker_id": "speaker_1",
+        "text": "Hello, what problem are you having today?",
+        "start_time_ms": 0,
+        "duration_ms": 1800
+      },
+      {
+        "utterance_id": 2,
+        "speaker_id": "speaker_2",
+        "text": "For the past four days I have been having throat irritation and mild cough.",
+        "start_time_ms": 1900,
+        "duration_ms": 2900
+      },
+      {
+        "utterance_id": 3,
+        "speaker_id": "speaker_1",
+        "text": "Do you have fever or body pain?",
+        "start_time_ms": 5000,
+        "duration_ms": 1600
+      },
+      {
+        "utterance_id": 4,
+        "speaker_id": "speaker_2",
+        "text": "I do not have much fever, but I feel body pain and weakness in the evening.",
+        "start_time_ms": 6700,
+        "duration_ms": 3400
+      },
+      {
+        "utterance_id": 5,
+        "speaker_id": "speaker_1",
+        "text": "Any breathing issue?",
+        "start_time_ms": 10200,
+        "duration_ms": 1100
+      },
+      {
+        "utterance_id": 6,
+        "speaker_id": "speaker_2",
+        "text": "Only a little breathlessness when I walk fast.",
+        "start_time_ms": 11400,
+        "duration_ms": 2200
+      }
+    ]
+  }
+}

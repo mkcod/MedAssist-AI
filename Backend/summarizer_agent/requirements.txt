@@ -1,0 +1,20 @@
+# MCP core
+mcp
+mcp[cli]
+azure-monitor-opentelemetry
+
+# Data handling
+pandas
+openpyxl
+openai>=1.0.0
+python-dotenv
+requests
+azure-storage-blob
+PyPDF2
+azure-cosmos
+pymongo
+azure-keyvault-secrets
+azure-identity
+
+azure-keyvault-secrets
+azure-identity

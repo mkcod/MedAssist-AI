@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "0",
+    "content": "ICD-10-CM Official Guidelines for Coding and Reporting",
+    "condition": "ICD-10-CM Official Guidelines for Coding and Reporting",
+    "icd_code": ""
+  },
+  {
+    "id": "1",
+    "content": "FY 2026 -- UPDATED October 1, 2025",
+    "condition": "FY 2026 -- UPDATED October 1, 2025",
+    "icd_code": ""
+  },
+  {
+    "id": "2",
+    "content": "(October 1 , 2025 - September 30, 2026)",
+    "condition": "(October 1 , 2025 - September 30, 2026)",
+    "icd_code": ""
+  },
+  {
+    "id": "4",
+    "content": "Narrative changes appear in bold text",
+    "condition": "Narrative changes appear in bold text",
+    "icd_code": ""
+  },
+  {
+    "id": "5",
+    "content": "Items underlined have been moved within the guidelines since the April 2025, FY 2025 version",
+    "condition": "Items underlined have been moved within the guidelines since",
+    "icd_code": ""
+  },
+  {
+    "id": "6",
+    "content": "Italics  are used to indicate  revisions to heading changes",
+    "condition": "Italics  are used to indicate  revisions to heading changes",
+    "icd_code": ""
+  },
+  {
+    "id": "8",
+    "content": "The Centers for Medicare and Medicaid Services (CMS) and the National Center for Health",
+    "condition": "The Centers for Medicare and Medicaid Services (CMS) and the",
+    "icd_code": ""
+  },
+  {
+    "id": "9",
+    "content": "Statistics (NCHS), two departments within the U.S. Federal Government\u2019s Department of Health and Human Services (DHHS) provide the following guidelines for coding and reporting using the International Classification of Diseases, 10",
+    "condition": "Statistics (NCHS), two departments within the U.S. Federal G",
+    "icd_code": ""
+  },
+  {
+    "id": "10",
+    "content": "th Revision, Clinical Modification (ICD -10-CM). These",
+    "condition": "th Revision, Clinical Modification (ICD -10-CM). These",
+    "icd_code": ""
+  },
+  {
+    "id": "11",
+    "content": "guidelines should be used as a companion document to the official version of the ICD -10-CM as",
+    "condition": "guidelines should be used as a companion document to the off",
+    "icd_code": ""
+  },
+  {
+    "id": "12",
+    "content": "published on the NCHS website. The ICD -10-CM is a morbidity classification published by the",
+    "condition": "published on the NCHS website. The ICD -10-CM is a morbidity",
+    "icd_code": ""
+  },
+  {
+    "id": "13",
+    "content": "United States for classifying diagnoses and reason for visits in all health care settings. The ICD -",
+    "condition": "United States for classifying diagnoses and reason for visit",
+    "icd_code": ""
+  },
+  {
+    "id": "14",
+    "content": "10-CM is based on the ICD -10, the statistical classification of disease published by the World",
+    "condition": "10-CM is based on the ICD -10, the statistical classificatio",
+    "icd_code": ""
+  },
+  {
+    "id": "17",
+    "content": "These guidelines have been  approved by the four organizations that make up the Cooperating",
+    "condition": "These guidelines have been  approved by the four organizatio",
+    "icd_code": ""
+  },
+  {
+    "id": "18",
+    "content": "Parties for the ICD-10-CM: the American Hospital Association (AHA), the American Health",
+    "condition": "Parties for the ICD-10-CM: the American Hospital Association",
+    "icd_code": ""
+  },
+  {
+    "id": "19",
+    "content": "Information Management Association (AHIMA), CMS, and NCHS.",
+    "condition": "Information Management Association (AHIMA), CMS, and NCHS.",
+    "icd_code": ""
+  },
+  {
+    "id": "21",
+    "content": "These guidelines are a set of rules that have been developed to accompany and complement the official conventions and instructions provided within the ICD -10-CM itself.  The instructions and",
+    "condition": "These guidelines are a set of rules that have been developed",
+    "icd_code": ""
+  },
+  {
+    "id": "22",
+    "content": "conventions of the classification take precedence over guidelines. These guidelines are based on",
+    "condition": "conventions of the classification take precedence over guide",
+    "icd_code": ""
+  },
+  {
+    "id": "23",
+    "content": "the coding and sequencing instructions in the Tabular List and Alphabetic Index of ICD-10-CM,",
+    "condition": "the coding and sequencing instructions in the Tabular List a",
+    "icd_code": ""
+  },
+  {
+    "id": "24",
+    "content": "but provide additional instruction. Adherence to these guidelines when assigning ICD -10-CM",
+    "condition": "but provide additional instruction. Adherence to these guide",
+    "icd_code": ""
+  },
+  {
+    "id": "25",
+    "content": "diagnosis codes is required under the Health Insurance Portability and Accountability Act (HIPAA). The diagnosis codes ( Tabular List and Alphabetic Index ) have been adopted under",
+    "condition": "diagnosis codes is required under the Health Insurance Porta",
+    "icd_code": ""
+  },
+  {
+    "id": "26",
+    "content": "HIPAA for all healthcare settings.  A joint effort between the healthcare provider and the coder is",
+    "condition": "HIPAA for all healthcare settings.  A joint effort between t",
+    "icd_code": ""
+  },
+  {
+    "id": "27",
+    "content": "essential to achiev e complete and accurate documentation, code assignment, and reporting of",
+    "condition": "essential to achiev e complete and accurate documentation, c",
+    "icd_code": ""
+  },
+  {
+    "id": "28",
+    "content": "diagnoses and procedures. These guidelines have been developed to assist both the healthcare",
+    "condition": "diagnoses and procedures. These guidelines have been develop",
+    "icd_code": ""
+  },
+  {
+    "id": "29",
+    "content": "provider and the coder in identifying those diagnoses that are to be reported. The importance of",
+    "condition": "provider and the coder in identifying those diagnoses that a",
+    "icd_code": ""
+  },
+  {
+    "id": "30",
+    "content": "consistent, complete documentation in the medical record cannot be overemphasized. Without such documentation accurate coding cannot be achieved. The entire record should be reviewed to",
+    "condition": "consistent, complete documentation in the medical record can",
+    "icd_code": ""
+  },
+  {
+    "id": "31",
+    "content": "determine the specific reason for the encounter and the conditi ons treated.",
+    "condition": "determine the specific reason for the encounter and the cond",
+    "icd_code": ""
+  },
+  {
+    "id": "33",
+    "content": "The term encounter is used for all settings, including hospital admissions.  In the context of these",
+    "condition": "The term encounter is used for all settings, including hospi",
+    "icd_code": ""
+  },
+  {
+    "id": "34",
+    "content": "guidelines, the term provider is used throughout the guidelines to mean physician or any qualified health care practitioner who is legally accountable for establishing the patient\u2019s diagnosis. Only this set of guidelines, approved by the Cooperating Parties, is official.",
+    "condition": "guidelines, the term provider is used throughout the guideli",
+    "icd_code": ""
+  },
+  {
+    "id": "36",
+    "content": "The guidelines are organized into sections. Section I includes the structure and conventions of the",
+    "condition": "The guidelines are organized into sections. Section I includ",
+    "icd_code": ""
+  },
+  {
+    "id": "37",
+    "content": "classification and general guidelines that apply to the entire classification, and chapter -specific",
+    "condition": "classification and general guidelines that apply to the enti",
+    "icd_code": ""
+  },
+  {
+    "id": "38",
+    "content": "guidelines that correspond to the chapters as they are arranged in the classification. Section II",
+    "condition": "guidelines that correspond to the chapters as they are arran",
+    "icd_code": ""
+  },
+  {
+    "id": "39",
+    "content": "includes guidelines for selection of principal diagnosis for non- outpatient settings.  Section III",
+    "condition": "includes guidelines for selection of principal diagnosis for",
+    "icd_code": ""
+  },
+  {
+    "id": "40",
+    "content": "includes guidelines for reporting additional diagnoses in non- outpatient settings.  Section IV is for",
+    "condition": "includes guidelines for reporting additional diagnoses in no",
+    "icd_code": ""
+  },
+  {
+    "id": "41",
+    "content": "outpatient coding and reporting. It is necessary to review all sections of the guidelines to fully",
+    "condition": "outpatient coding and reporting. It is necessary to review a",
+    "icd_code": ""
+  },
+  {
+    "id": "42",
+    "content": "understand all of the rules and instructions needed to code properly.  ICD-10-CM Official Guidelines for Coding and  Reporting",
+    "condition": "understand all of the rules and instructions needed to code ",
+    "icd_code": ""
+  },
+  {
+    "id": "46",
+    "content": "ICD-10-CM Official Guidelines for Coding and Reporting ........................................................................1",
+    "condition": "ICD-10-CM Official Guidelines for Coding and Reporting .....",
+    "icd_code": ""
+  },
+  {
+    "id": "47",
+    "content": "Section I.  Conventions, general coding guidelines and chapter specific guidelines ...............................7",
+    "condition": "Section I.  Conventions, general coding guidelines and chapt",
+    "icd_code": ""
+  },
+  {
+    "id": "48",
+    "content": "A. Conventions for the ICD-10- CM .................................................................................................... 7",
+    "condition": "A. Conventions for the ICD-10- CM ..........................",
+    "icd_code": ""
+  },
+  {
+    "id": "49",
+    "content": "1. The Alphabetic Index and Tabular List .................................................................................... 7",
+    "condition": "1. The Alphabetic Index and Tabular List ...................",
+    "icd_code": ""
+  },
+  {
+    "id": "50",
+    "content": "2. Format and Structure: ............................................................................................................... 7",
+    "condition": "2. Format and Structure: ...................................",
+    "icd_code": ""
+  },
+  {
+    "id": "51",
+    "content": "3. Use of codes for reporting purposes ......................................................................................... 7",
+    "condition": "3. Use of codes for reporting purposes .....................",
+    "icd_code": ""
+  },
+  {
+    "id": "52",
+    "content": "4. Placeholder character  ................................................................................................................ 7",
+    "condition": "4. Placeholder character  ..................................",
+    "icd_code": ""
+  },
+  {
+    "id": "53",
+    "content": "5. 7th Characters  ............................................................................................................................ 8",
+    "condition": "5. 7th Characters  .........................................",
+    "icd_code": ""
+  },
+  {
+    "id": "54",
+    "content": "6. Abbreviations ............................................................................................................................ 8",
+    "condition": "6. Abbreviations ...........................................",
+    "icd_code": ""
+  },
+  {
+    "id": "55",
+    "content": "a. Alphabetic Index abbreviations  .............................................................................................. 8",
+    "condition": "a. Alphabetic Index abbreviations  .........................",
+    "icd_code": ""
+  },
+  {
+    "id": "56",
+    "content": "b. Tabular List abbreviations ...................................................................................................... 8",
+    "condition": "b. Tabular List abbreviations ..............................",
+    "icd_code": ""
+  },
+  {
+    "id": "57",
+    "content": "7. Punctuation ............................................................................................................................... 8",
+    "condition": "7. Punctuation .............................................",
+    "icd_code": ""
+  },
+  {
+    "id": "58",
+    "content": "8. Use of \u201cand\u201d.  ............................................................................................................................. 9",
+    "condition": "8. Use of \u201cand\u201d.  ..........................................",
+    "icd_code": ""
+  },
+  {
+    "id": "59",
+    "content": "9. Other and Unspecified codes .................................................................................................... 9",
+    "condition": "9. Other and Unspecified codes .............................",
+    "icd_code": ""
+  },
+  {
+    "id": "60",
+    "content": "a. \u201cOther\u201d codes  .......................................................................................................................... 9",
+    "condition": "a. \u201cOther\u201d codes  ..........................................",
+    "icd_code": ""
+  },
+  {
+    "id": "61",
+    "content": "b. \u201cUnspecified\u201d codes ................................................................................................................ 9",
+    "condition": "b. \u201cUnspecified\u201d codes .....................................",
+    "icd_code": ""
+  },
+  {
+    "id": "62",
+    "content": "10. Includes Notes  ........................................................................................................................... 9",
+    "condition": "10. Includes Notes  ........................................",
+    "icd_code": ""
+  },
+  {
+    "id": "63",
+    "content": "11. Inclusion terms  .......................................................................................................................... 9",
+    "condition": "11. Inclusion terms  .......................................",
+    "icd_code": ""
+  },
+  {
+    "id": "64",
+    "content": "12. Excludes Notes .......................................................................................................................... 9",
+    "condition": "12. Excludes Notes .........................................",
+    "icd_code": ""
+  },
+  {
+    "id": "65",
+    "content": "a. Excludes1 ................................................................................................................................ 9",
+    "condition": "a. Excludes1 ...............................................",
+    "icd_code": ""
+  },
+  {
+    "id": "66",
+    "content": "b. Excludes2 .............................................................................................................................. 10",
+    "condition": "b. Excludes2 ...............................................",
+    "icd_code": ""
+  },
+  {
+    "id": "67",
+    "content": "13. Etiology/manifestation convention (\u201ccode first\u201d, \u201cuse additional code\u201d and \u201cin diseases classified elsewhere\u201d notes)  .................................................................................................... 10",
+    "condition": "13. Etiology/manifestation convention (\u201ccode first\u201d, \u201cuse ad",
+    "icd_code": ""
+  },
+  {
+    "id": "68",
+    "content": "14. \u201cAnd\u201d ...................................................................................................................................... 11",
+    "condition": "14. \u201cAnd\u201d ..................................................",
+    "icd_code": ""
+  },
+  {
+    "id": "69",
+    "content": "15. \u201cWith\u201d  ..................................................................................................................................... 11",
+    "condition": "15. \u201cWith\u201d  ................................................",
+    "icd_code": ""
+  },
+  {
+    "id": "70",
+    "content": "16. \u201cSee\u201d and \u201cSee Also\u201d .............................................................................................................. 11",
+    "condition": "16. \u201cSee\u201d and \u201cSee Also\u201d ...................................",
+    "icd_code": ""
+  },
+  {
+    "id": "71",
+    "content": "17. \u201cCode also\u201d note ..................................................................................................................... 12",
+    "condition": "17. \u201cCode also\u201d note .......................................",
+    "icd_code": ""
+  },
+  {
+    "id": "72",
+    "content": "18. Default codes  .......................................................................................................................... 12",
+    "condition": "18. Default codes  .........................................",
+    "icd_code": ""
+  },
+  {
+    "id": "73",
+    "content": "19. Code assignment and Clinical Criteria  ................................................................................... 12",
+    "condition": "19. Code assignment and Clinical Criteria  .................",
+    "icd_code": ""
+  },
+  {
+    "id": "74",
+    "content": "B. General Coding Guidelines ........................................................................................................... 12",
+    "condition": "B. General Coding Guidelines ...............................",
+    "icd_code": ""
+  },
+  {
+    "id": "75",
+    "content": "1. Locating a code in the ICD -10-CM ........................................................................................ 12",
+    "condition": "1. Locating a code in the ICD -10-CM .......................",
+    "icd_code": ""
+  },
+  {
+    "id": "76",
+    "content": "2. Level of Detail in Coding ....................................................................................................... 12",
+    "condition": "2. Level of Detail in Coding ...............................",
+    "icd_code": ""
+  },
+  {
+    "id": "77",
+    "content": "3. Code or codes from A00.0 through T88.9, Z00-Z99.8, U00 -U85 .......................................... 13",
+    "condition": "3. Code or codes from A00.0 through T88.9, Z00-Z99.8, U00 -U",
+    "icd_code": ""
+  },
+  {
+    "id": "78",
+    "content": "4. Signs and symptoms ............................................................................................................... 13",
+    "condition": "4. Signs and symptoms ......................................",
+    "icd_code": ""
+  },
+  {
+    "id": "79",
+    "content": "5. Conditions that are an integral part of a disease process ........................................................ 13",
+    "condition": "5. Conditions that are an integral part of a disease process",
+    "icd_code": ""
+  },
+  {
+    "id": "80",
+    "content": "6. Conditions that are not an integral part of a disease process .................................................. 13",
+    "condition": "6. Conditions that are not an integral part of a disease pro",
+    "icd_code": ""
+  },
+  {
+    "id": "81",
+    "content": "7. Multiple coding for a single condition .................................................................................... 13",
+    "condition": "7. Multiple coding for a single condition ..................",
+    "icd_code": ""
+  },
+  {
+    "id": "82",
+    "content": "8. Acute and Chronic Conditions ................................................................................................ 14",
+    "condition": "8. Acute and Chronic Conditions ............................",
+    "icd_code": ""
+  },
+  {
+    "id": "83",
+    "content": "9. Combination Code .................................................................................................................. 14",
+    "condition": "9. Combination Code ........................................",
+    "icd_code": ""
+  },
+  {
+    "id": "84",
+    "content": "10. Sequela (Late Effects)  ............................................................................................................. 14",
+    "condition": "10. Sequela (Late Effects)  ................................",
+    "icd_code": ""
+  },
+  {
+    "id": "85",
+    "content": "11. Impending or Threatened Condition ....................................................................................... 15",
+    "condition": "11. Impending or Threatened Condition ......................",
+    "icd_code": ""
+  },
+  {
+    "id": "86",
+    "content": "12. Reporting Same Diagnosis Code More than Once ................................................................. 15",
+    "condition": "12. Reporting Same Diagnosis Code More than Once ...........",
+    "icd_code": ""
+  },
+  {
+    "id": "87",
+    "content": "13. Laterality  ................................................................................................................................. 15",
+    "condition": "13. Laterality  ............................................",
+    "icd_code": ""
+  },
+  {
+    "id": "88",
+    "content": "14. Documentation by Clinicians Other than the Patient's Provider ............................................. 15",
+    "condition": "14. Documentation by Clinicians Other than the Patient's Pro",
+    "icd_code": ""
+  },
+  {
+    "id": "89",
+    "content": "15. Syndromes ............................................................................................................................... 16",
+    "condition": "15. Syndromes ..............................................",
+    "icd_code": ""
+  },
+  {
+    "id": "90",
+    "content": "16. Documentation of Complications of Care .............................................................................. 16",
+    "condition": "16. Documentation of Complications of Care .................",
+    "icd_code": ""
+  },
+  {
+    "id": "92",
+    "content": ".............................................................................................................. 17",
+    "condition": "............................................................",
+    "icd_code": ""
+  },
+  {
+    "id": "93",
+    "content": "18. Use of Sign/Symptom/Unspecified Codes .............................................................................. 17",
+    "condition": "18. Use of Sign/Symptom/Unspecified Codes ..................",
+    "icd_code": ""
+  },
+  {
+    "id": "94",
+    "content": "19. Coding for Healthcare Encounters in Hurricane Aftermath ................................................... 17 ICD-10-CM Official Guidelines for Coding and  Reporting",
+    "condition": "19. Coding for Healthcare Encounters in Hurricane Aftermath ",
+    "icd_code": ""
+  },
+  {
+    "id": "97",
+    "content": "a. Use of External Cause of Morbidity Codes .......................................................................... 17",
+    "condition": "a. Use of External Cause of Morbidity Codes ................",
+    "icd_code": ""
+  },
+  {
+    "id": "98",
+    "content": "b. Sequencing of External Causes of Morbidity Codes ............................................................ 18",
+    "condition": "b. Sequencing of External Causes of Morbidity Codes ........",
+    "icd_code": ""
+  },
+  {
+    "id": "99",
+    "content": "c. Other External Causes of Morbidity Code Issues ................................................................. 18",
+    "condition": "c. Other External Causes of Morbidity Code Issues ..........",
+    "icd_code": ""
+  },
+  {
+    "id": "100",
+    "content": "d. Use of Z codes  ...................................................................................................................... 18",
+    "condition": "d. Use of Z codes  .........................................",
+    "icd_code": ""
+  },
+  {
+    "id": "101",
+    "content": "C. Chapter -Specific Coding Guidelines ............................................................................................ 19",
+    "condition": "C. Chapter -Specific Coding Guidelines .....................",
+    "icd_code": ""
+  },
+  {
+    "id": "102",
+    "content": "1. Chapter 1: Certain Infectious and Parasitic Diseases (A00 -B99), U07.1, U09.9 ................... 19",
+    "condition": "1. Chapter 1: Certain Infectious and Parasitic Diseases (A00",
+    "icd_code": ""
+  },
+  {
+    "id": "103",
+    "content": "a. Human Immunodeficiency Virus (HIV) Infections .............................................................. 19",
+    "condition": "a. Human Immunodeficiency Virus (HIV) Infections ...........",
+    "icd_code": ""
+  },
+  {
+    "id": "104",
+    "content": "b. Infectious agents as the cause of diseases classified to other chapters  ................................. 22",
+    "condition": "b. Infectious agents as the cause of diseases classified to ",
+    "icd_code": ""
+  },
+  {
+    "id": "105",
+    "content": "c. Infections resistant to antibiotics  .......................................................................................... 22",
+    "condition": "c. Infections resistant to antibiotics  ....................",
+    "icd_code": ""
+  },
+  {
+    "id": "106",
+    "content": "d. Sepsis, Severe Sepsis, and Septic Shock Infections resistant to antibiotics ......................... 23",
+    "condition": "d. Sepsis, Severe Sepsis, and Septic Shock Infections resist",
+    "icd_code": ""
+  },
+  {
+    "id": "107",
+    "content": "e. Methicillin Resistant Staphylococcus aureus (MRSA) Conditions ...................................... 27",
+    "condition": "e. Methicillin Resistant Staphylococcus aureus (MRSA) Condit",
+    "icd_code": ""
+  },
+  {
+    "id": "108",
+    "content": "f. Zika virus infections ............................................................................................................. 28",
+    "condition": "f. Zika virus infections ...................................",
+    "icd_code": ""
+  },
+  {
+    "id": "109",
+    "content": "g. Coronavirus infections .......................................................................................................... 28",
+    "condition": "g. Coronavirus infections ..................................",
+    "icd_code": ""
+  },
+  {
+    "id": "110",
+    "content": "2. Chapter 2: Neoplasms (C00-D49) .......................................................................................... 32",
+    "condition": "2. Chapter 2: Neoplasms (C00-D49) ..........................",
+    "icd_code": ""
+  },
+  {
+    "id": "111",
+    "content": "a. Admission/Encounter for treatment of primary site  ............................................................. 33",
+    "condition": "a. Admission/Encounter for treatment of primary site  ......",
+    "icd_code": ""
+  },
+  {
+    "id": "112",
+    "content": "b. Admission/Encounter for treatment of secondary site .......................................................... 33",
+    "condition": "b. Admission/Encounter for treatment of secondary site .....",
+    "icd_code": ""
+  },
+  {
+    "id": "113",
+    "content": "c. Coding and sequencing of complications ............................................................................. 34",
+    "condition": "c. Coding and sequencing of complications ..................",
+    "icd_code": ""
+  },
+  {
+    "id": "114",
+    "content": "d. Primary malignancy previously excised ............................................................................... 34",
+    "condition": "d. Primary malignancy previously excised ...................",
+    "icd_code": ""
+  },
+  {
+    "id": "115",
+    "content": "e. Admissions/Encounters involving chemotherapy, immunotherapy and radiation therapy .. 35",
+    "condition": "e. Admissions/Encounters involving chemotherapy, immunothera",
+    "icd_code": ""
+  },
+  {
+    "id": "116",
+    "content": "f. Admission/encounter to determine extent of malignancy .................................................... 36",
+    "condition": "f. Admission/encounter to determine extent of malignancy ...",
+    "icd_code": ""
+  },
+  {
+    "id": "117",
+    "content": "g. Symptoms, signs, and abnormal findings listed in Chapter 18 associated with neoplasms . 36",
+    "condition": "g. Symptoms, signs, and abnormal findings listed in Chapter ",
+    "icd_code": ""
+  },
+  {
+    "id": "118",
+    "content": "h. Admission/encounter for pain control/management ............................................................. 36",
+    "condition": "h. Admission/encounter for pain control/management .........",
+    "icd_code": ""
+  },
+  {
+    "id": "119",
+    "content": "i. Malignancy in two or more noncontiguous sites .................................................................. 36",
+    "condition": "i. Malignancy in two or more noncontiguous sites ...........",
+    "icd_code": ""
+  },
+  {
+    "id": "120",
+    "content": "j. Disseminated malignant neoplasm, unspecified ................................................................... 36",
+    "condition": "j. Disseminated malignant neoplasm, unspecified ............",
+    "icd_code": ""
+  },
+  {
+    "id": "121",
+    "content": "k. Malignant neoplasm without specification of site  ................................................................ 36",
+    "condition": "k. Malignant neoplasm without specification of site  .......",
+    "icd_code": ""
+  },
+  {
+    "id": "122",
+    "content": "l. Sequencing of neoplasm codes ............................................................................................. 37",
+    "condition": "l. Sequencing of neoplasm codes ............................",
+    "icd_code": ""
+  },
+  {
+    "id": "123",
+    "content": "m. Current malignancy versus personal history of malignancy ................................................. 38",
+    "condition": "m. Current malignancy versus personal history of malignancy ",
+    "icd_code": ""
+  },
+  {
+    "id": "124",
+    "content": "n. Leukemia, Multiple Myeloma, and Malignant Plasma Cell Neoplasms in remission versus",
+    "condition": "n. Leukemia, Multiple Myeloma, and Malignant Plasma Cell Neo",
+    "icd_code": ""
+  },
+  {
+    "id": "125",
+    "content": "personal history .................................................................................................................... 38",
+    "condition": "personal history ...........................................",
+    "icd_code": ""
+  },
+  {
+    "id": "126",
+    "content": "o. Aftercare following surgery for neoplasm ............................................................................ 38",
+    "condition": "o. Aftercare following surgery for neoplasm ................",
+    "icd_code": ""
+  },
+  {
+    "id": "127",
+    "content": "p. Follow- up care for completed treatment of a malignancy  .................................................... 38",
+    "condition": "p. Follow- up care for completed treatment of a malignancy  ",
+    "icd_code": ""
+  },
+  {
+    "id": "128",
+    "content": "q. Prophylactic organ removal for prevention of malignancy .................................................. 38",
+    "condition": "q. Prophylactic organ removal for prevention of malignancy .",
+    "icd_code": ""
+  },
+  {
+    "id": "129",
+    "content": "r. Malignant neoplasm associated with transplanted organ ...................................................... 38",
+    "condition": "r. Malignant neoplasm associated with transplanted organ ...",
+    "icd_code": ""
+  },
+  {
+    "id": "130",
+    "content": "s. Breast Implant Associated Anaplastic Large Cell Lymphoma  ............................................. 39",
+    "condition": "s. Breast Implant Associated Anaplastic Large Cell Lymphoma ",
+    "icd_code": ""
+  },
+  {
+    "id": "131",
+    "content": "t. Secondary malignant neoplasm of lymphoid tissue .................................................................. 39",
+    "condition": "t. Secondary malignant neoplasm of lymphoid tissue .........",
+    "icd_code": ""
+  },
+  {
+    "id": "132",
+    "content": "3. Chapter 3: Disease of the blood and blood-forming organs and certain disorders involving the",
+    "condition": "3. Chapter 3: Disease of the blood and blood-forming organs ",
+    "icd_code": ""
+  },
+  {
+    "id": "133",
+    "content": "immune mechanism (D50 -D89) ............................................................................................. 39",
+    "condition": "immune mechanism (D50 -D89) ................................",
+    "icd_code": ""
+  },
+  {
+    "id": "134",
+    "content": "Reserved for future guideline expansion ...................................................................................... 39",
+    "condition": "Reserved for future guideline expansion ....................",
+    "icd_code": ""
+  },
+  {
+    "id": "135",
+    "content": "4. Chapter 4: Endocrine, Nutritional, and Metabolic Diseases (E00-E89) ................................. 39",
+    "condition": "4. Chapter 4: Endocrine, Nutritional, and Metabolic Diseases",
+    "icd_code": ""
+  },
+  {
+    "id": "136",
+    "content": "a. Diabetes mellitus  ................................................................................................................... 39",
+    "condition": "a. Diabetes mellitus  ......................................",
+    "icd_code": ""
+  },
+  {
+    "id": "137",
+    "content": "b. Obesity  .................................................................................................................................. 42",
+    "condition": "b. Obesity  ................................................",
+    "icd_code": ""
+  },
+  {
+    "id": "138",
+    "content": "5. Chapter 5: Mental, Behavioral and Neurodevelopmental disorders (F01 \u2013 F99) ................... 43",
+    "condition": "5. Chapter 5: Mental, Behavioral and Neurodevelopmental diso",
+    "icd_code": ""
+  },
+  {
+    "id": "139",
+    "content": "a. Pain disorders related to psychological factors ..................................................................... 43",
+    "condition": "a. Pain disorders related to psychological factors .........",
+    "icd_code": ""
+  },
+  {
+    "id": "140",
+    "content": "b. Mental and behavioral disorders due to psychoactive substance use ................................... 43",
+    "condition": "b. Mental and behavioral disorders due to psychoactive subst",
+    "icd_code": ""
+  },
+  {
+    "id": "141",
+    "content": "c. Factitious Disorder  ................................................................................................................ 44",
+    "condition": "c. Factitious Disorder  ....................................",
+    "icd_code": ""
+  },
+  {
+    "id": "142",
+    "content": "6. Chapter 6: Diseases of the Nervous System (G00-G99) ........................................................ 45",
+    "condition": "6. Chapter 6: Diseases of the Nervous System (G00-G99) .....",
+    "icd_code": ""
+  },
+  {
+    "id": "143",
+    "content": "a. Dominant/nondominant side ................................................................................................. 45",
+    "condition": "a. Dominant/nondominant side ...............................",
+    "icd_code": ""
+  },
+  {
+    "id": "144",
+    "content": "b. Pain - Category G89 .............................................................................................................. 45",
+    "condition": "b. Pain - Category G89 .....................................",
+    "icd_code": ""
+  },
+  {
+    "id": "145",
+    "content": "7. Chapter 7: Diseases of the Eye and Adnexa (H00 -H59) ........................................................ 48",
+    "condition": "7. Chapter 7: Diseases of the Eye and Adnexa (H00 -H59) ....",
+    "icd_code": ""
+  },
+  {
+    "id": "146",
+    "content": "a. Glaucoma  .............................................................................................................................. 48 ICD-10-CM Official Guidelines for Coding and  Reporting",
+    "condition": "a. Glaucoma  ...............................................",
+    "icd_code": ""
+  },
+  {
+    "id": "151",
+    "content": "b. Blindness ............................................................................................................................... 49",
+    "condition": "b. Blindness ...............................................",
+    "icd_code": ""
+  },
+  {
+    "id": "152",
+    "content": "8. Chapter 8: Diseases of the Ear and Mastoid Process (H60 -H95) ........................................... 49",
+    "condition": "8. Chapter 8: Diseases of the Ear and Mastoid Process (H60 -",
+    "icd_code": ""
+  },
+  {
+    "id": "153",
+    "content": "Reserved for future guideline expansion ...................................................................................... 49",
+    "condition": "Reserved for future guideline expansion ....................",
+    "icd_code": ""
+  },
+  {
+    "id": "154",
+    "content": "9. Chapter 9: Diseases of the Circulatory System (I00 -I99) ....................................................... 50",
+    "condition": "9. Chapter 9: Diseases of the Circulatory System (I00 -I99) ",
+    "icd_code": ""
+  },
+  {
+    "id": "155",
+    "content": "a. Hypertension ......................................................................................................................... 50",
+    "condition": "a. Hypertension ............................................",
+    "icd_code": ""
+  },
+  {
+    "id": "156",
+    "content": "b. Atherosclerotic Coronary Artery Disease and Angina ......................................................... 52",
+    "condition": "b. Atherosclerotic Coronary Artery Disease and Angina ......",
+    "icd_code": ""
+  },
+  {
+    "id": "157",
+    "content": "c. Intraoperative and Postprocedural Cerebrovascular Accident .............................................. 53",
+    "condition": "c. Intraoperative and Postprocedural Cerebrovascular Acciden",
+    "icd_code": ""
+  },
+  {
+    "id": "158",
+    "content": "d. Sequelae of Cerebrovascular Disease  ................................................................................... 53",
+    "condition": "d. Sequelae of Cerebrovascular Disease  ....................",
+    "icd_code": ""
+  },
+  {
+    "id": "159",
+    "content": "e. Acute myocardial infarction (AMI) ...................................................................................... 54",
+    "condition": "e. Acute myocardial infarction (AMI) .......................",
+    "icd_code": ""
+  },
+  {
+    "id": "160",
+    "content": "10. Chapter 10: Diseases of the Respiratory System (J00-J99), U07.0 ........................................ 56",
+    "condition": "10. Chapter 10: Diseases of the Respiratory System (J00-J99)",
+    "icd_code": ""
+  },
+  {
+    "id": "161",
+    "content": "a. Chronic Obstructive Pulmonary Disease [COPD] and Asthma ........................................... 56",
+    "condition": "a. Chronic Obstructive Pulmonary Disease [COPD] and Asthma .",
+    "icd_code": ""
+  },
+  {
+    "id": "162",
+    "content": "b. Acute Respiratory Failure ..................................................................................................... 56",
+    "condition": "b. Acute Respiratory Failure ...............................",
+    "icd_code": ""
+  },
+  {
+    "id": "163",
+    "content": "c. Influenza due to certain identified influenza viruses ............................................................ 57",
+    "condition": "c. Influenza due to certain identified influenza viruses ...",
+    "icd_code": ""
+  },
+  {
+    "id": "164",
+    "content": "d. Ventilator associated Pneumonia .......................................................................................... 57",
+    "condition": "d. Ventilator associated Pneumonia .........................",
+    "icd_code": ""
+  },
+  {
+    "id": "165",
+    "content": "e. Vaping- related disorders  ....................................................................................................... 58",
+    "condition": "e. Vaping- related disorders  ..............................",
+    "icd_code": ""
+  },
+  {
+    "id": "166",
+    "content": "11. Chapter 11: Diseases of the Digestive System (K00 -K95) ..................................................... 58",
+    "condition": "11. Chapter 11: Diseases of the Digestive System (K00 -K95) ",
+    "icd_code": ""
+  },
+  {
+    "id": "167",
+    "content": "Reserved for future guideline expansion ...................................................................................... 58",
+    "condition": "Reserved for future guideline expansion ....................",
+    "icd_code": ""
+  },
+  {
+    "id": "168",
+    "content": "12. Chapter 12: Diseases of the Skin and Subcutaneous Tissue (L00-L99) ................................. 58",
+    "condition": "12. Chapter 12: Diseases of the Skin and Subcutaneous Tissue",
+    "icd_code": ""
+  },
+  {
+    "id": "169",
+    "content": "a. Pressure ulcer stage codes  ..................................................................................................... 58",
+    "condition": "a. Pressure ulcer stage codes  .............................",
+    "icd_code": ""
+  },
+  {
+    "id": "170",
+    "content": "b. Non-Pressure Chronic Ulcers  ............................................................................................... 60",
+    "condition": "b. Non-Pressure Chronic Ulcers  ............................",
+    "icd_code": ""
+  },
+  {
+    "id": "171",
+    "content": "13. Chapter 13: Diseases of the Musculoskeletal System and Connective Tissue (M00-M99) ... 60",
+    "condition": "13. Chapter 13: Diseases of the Musculoskeletal System and C",
+    "icd_code": ""
+  },
+  {
+    "id": "172",
+    "content": "a. Site and laterality  .................................................................................................................. 60",
+    "condition": "a. Site and laterality  ....................................",
+    "icd_code": ""
+  },
+  {
+    "id": "173",
+    "content": "b. Acute traumatic versus chronic or recurrent musculoskeletal conditions ............................ 61",
+    "condition": "b. Acute traumatic versus chronic or recurrent musculoskelet",
+    "icd_code": ""
+  },
+  {
+    "id": "174",
+    "content": "c. Coding of Pathologic Fractures ............................................................................................ 61",
+    "condition": "c. Coding of Pathologic Fractures ..........................",
+    "icd_code": ""
+  },
+  {
+    "id": "175",
+    "content": "d. Osteoporosis .......................................................................................................................... 61",
+    "condition": "d. Osteoporosis ............................................",
+    "icd_code": ""
+  },
+  {
+    "id": "176",
+    "content": "e. Multisystem Inflammatory Syndrome  .................................................................................. 62",
+    "condition": "e. Multisystem Inflammatory Syndrome  ......................",
+    "icd_code": ""
+  },
+  {
+    "id": "177",
+    "content": "14. Chapter 14: Diseases of Genitourinary System (N00-N99) ................................................... 62",
+    "condition": "14. Chapter 14: Diseases of Genitourinary System (N00-N99) .",
+    "icd_code": ""
+  },
+  {
+    "id": "178",
+    "content": "a. Chronic kidney disease ......................................................................................................... 62",
+    "condition": "a. Chronic kidney disease ..................................",
+    "icd_code": ""
+  },
+  {
+    "id": "179",
+    "content": "15. Chapter 15: Pregnancy, Childbirth, and the Puerperium  (O00- O9A)  ................................... 63",
+    "condition": "15. Chapter 15: Pregnancy, Childbirth, and the Puerperium  (",
+    "icd_code": ""
+  },
+  {
+    "id": "180",
+    "content": "a. General Rules for Obstetric Cases  ........................................................................................ 63",
+    "condition": "a. General Rules for Obstetric Cases  ......................",
+    "icd_code": ""
+  },
+  {
+    "id": "181",
+    "content": "b. Selection of OB Principal or First- listed Diagnosis  .............................................................. 64",
+    "condition": "b. Selection of OB Principal or First- listed Diagnosis  ...",
+    "icd_code": ""
+  },
+  {
+    "id": "182",
+    "content": "c. Pre-existing conditions versus conditions due to the pregnancy .......................................... 65",
+    "condition": "c. Pre-existing conditions versus conditions due to the preg",
+    "icd_code": ""
+  },
+  {
+    "id": "183",
+    "content": "d. Pre-existing hypertension in pregnancy ................................................................................ 66",
+    "condition": "d. Pre-existing hypertension in pregnancy ..................",
+    "icd_code": ""
+  },
+  {
+    "id": "184",
+    "content": "e. Fetal Conditions Affecting the Management of the Mother ................................................. 66",
+    "condition": "e. Fetal Conditions Affecting the Management of the Mother .",
+    "icd_code": ""
+  },
+  {
+    "id": "185",
+    "content": "f. HIV Infection in Pregnancy, Childbirth and the Puerperium ............................................... 66",
+    "condition": "f. HIV Infection in Pregnancy, Childbirth and the Puerperium",
+    "icd_code": ""
+  },
+  {
+    "id": "186",
+    "content": "g. Diabetes mellitus in pregnancy  ............................................................................................. 66",
+    "condition": "g. Diabetes mellitus in pregnancy  .........................",
+    "icd_code": ""
+  },
+  {
+    "id": "187",
+    "content": "h. Long term use of insulin and oral hypoglycemics ................................................................ 67",
+    "condition": "h. Long term use of insulin and oral hypoglycemics .........",
+    "icd_code": ""
+  },
+  {
+    "id": "188",
+    "content": "i. Gestational (pregnancy induced) diabetes  ............................................................................ 67",
+    "condition": "i. Gestational (pregnancy induced) diabetes  ...............",
+    "icd_code": ""
+  },
+  {
+    "id": "189",
+    "content": "j. Sepsis and septic shock complicating abortion, pregnancy, childbirth and the puerperium 67",
+    "condition": "j. Sepsis and septic shock complicating abortion, pregnancy,",
+    "icd_code": ""
+  },
+  {
+    "id": "190",
+    "content": "k. Puerperal sepsis  ..................................................................................................................... 67",
+    "condition": "k. Puerperal sepsis  .......................................",
+    "icd_code": ""
+  },
+  {
+    "id": "191",
+    "content": "l. Alcohol, tobacco and drug use during pregnancy, childbirth and the puerperium ............... 68",
+    "condition": "l. Alcohol, tobacco and drug use during pregnancy, childbirt",
+    "icd_code": ""
+  },
+  {
+    "id": "192",
+    "content": "m. Poisoning, toxic effects, adverse effects and underdosing in a pregnant patient .................. 68",
+    "condition": "m. Poisoning, toxic effects, adverse effects and underdosing",
+    "icd_code": ""
+  },
+  {
+    "id": "193",
+    "content": "n. Normal Delivery, Code O80 ................................................................................................. 68",
+    "condition": "n. Normal Delivery, Code O80 ...............................",
+    "icd_code": ""
+  },
+  {
+    "id": "194",
+    "content": "o. The Peripartum and Postpartum Periods ............................................................................... 69",
+    "condition": "o. The Peripartum and Postpartum Periods ...................",
+    "icd_code": ""
+  },
+  {
+    "id": "195",
+    "content": "p. Code O94, Sequelae of complication of pregnancy, childbirth, and the puerperium ........... 70",
+    "condition": "p. Code O94, Sequelae of complication of pregnancy, childbir",
+    "icd_code": ""
+  },
+  {
+    "id": "196",
+    "content": "q. Termination of Pregnancy and Spontaneous abortions ........................................................ 70",
+    "condition": "q. Termination of Pregnancy and Spontaneous abortions ......",
+    "icd_code": ""
+  },
+  {
+    "id": "197",
+    "content": "r. Abuse in a pregnant patient ................................................................................................... 71",
+    "condition": "r. Abuse in a pregnant patient .............................",
+    "icd_code": ""
+  },
+  {
+    "id": "198",
+    "content": "s. COVID-19 infection in pregnancy, childbirth, and the puerperium ..................................... 71 ICD-10-CM Official Guidelines for Coding and  Reporting",
+    "condition": "s. COVID-19 infection in pregnancy, childbirth, and the puer",
+    "icd_code": ""
+  },
+  {
+    "id": "201",
+    "content": "16. Chapter 16: Certain Conditions Originating in the Perinatal Period (P00-P96) ..................... 71",
+    "condition": "16. Chapter 16: Certain Conditions Originating in the Perina",
+    "icd_code": ""
+  },
+  {
+    "id": "202",
+    "content": "a. General Perinatal Rules ......................................................................................................... 71",
+    "condition": "a. General Perinatal Rules .................................",
+    "icd_code": ""
+  },
+  {
+    "id": "203",
+    "content": "b. Observation and Evaluation of Newborns for Suspected Conditions not Found ................. 73",
+    "condition": "b. Observation and Evaluation of Newborns for Suspected Cond",
+    "icd_code": ""
+  },
+  {
+    "id": "204",
+    "content": "c. Coding Additional Perinatal Diagnoses ................................................................................ 73",
+    "condition": "c. Coding Additional Perinatal Diagnoses ...................",
+    "icd_code": ""
+  },
+  {
+    "id": "205",
+    "content": "d. Prematurity and Fetal Growth Retardation  ........................................................................... 73",
+    "condition": "d. Prematurity and Fetal Growth Retardation  ...............",
+    "icd_code": ""
+  },
+  {
+    "id": "206",
+    "content": "e. Low birth weight and immaturity status  ............................................................................... 74",
+    "condition": "e. Low birth weight and immaturity status  .................",
+    "icd_code": ""
+  },
+  {
+    "id": "207",
+    "content": "f. Bacterial Sepsis of Newborn  ................................................................................................. 74",
+    "condition": "f. Bacterial Sepsis of Newborn  ............................",
+    "icd_code": ""
+  },
+  {
+    "id": "208",
+    "content": "g. Stillbirth  ................................................................................................................................ 74",
+    "condition": "g. Stillbirth  .............................................",
+    "icd_code": ""
+  },
+  {
+    "id": "209",
+    "content": "h. COVID- 19 Infection in Newborn  ......................................................................................... 74",
+    "condition": "h. COVID- 19 Infection in Newborn  .........................",
+    "icd_code": ""
+  },
+  {
+    "id": "210",
+    "content": "17. Chapter 17: Congenital malformations, deformations, and chromosomal abnormalities (Q00-",
+    "condition": "17. Chapter 17: Congenital malformations, deformations, and ",
+    "icd_code": ""
+  },
+  {
+    "id": "211",
+    "content": "QA1) ....................................................................................................................................... 74",
+    "condition": "QA1) .......................................................",
+    "icd_code": ""
+  },
+  {
+    "id": "212",
+    "content": "18. Chapter 18: Symptoms, signs, and abnormal clinical and laboratory findings, not elsewhere classified (R00 -R99) ............................................................................................................... 75",
+    "condition": "18. Chapter 18: Symptoms, signs, and abnormal clinical and l",
+    "icd_code": ""
+  },
+  {
+    "id": "213",
+    "content": "a. Use of symptom codes .......................................................................................................... 75",
+    "condition": "a. Use of symptom codes ....................................",
+    "icd_code": ""
+  },
+  {
+    "id": "214",
+    "content": "b. Use of a symptom code with a definitive diagnosis code ..................................................... 75",
+    "condition": "b. Use of a symptom code with a definitive diagnosis code ..",
+    "icd_code": ""
+  },
+  {
+    "id": "215",
+    "content": "c. Combination codes that include symptoms .......................................................................... 75",
+    "condition": "c. Combination codes that include symptoms .................",
+    "icd_code": ""
+  },
+  {
+    "id": "216",
+    "content": "d. Repeated falls  ........................................................................................................................ 76",
+    "condition": "d. Repeated falls  .........................................",
+    "icd_code": ""
+  },
+  {
+    "id": "217",
+    "content": "e. Coma ..................................................................................................................................... 76",
+    "condition": "e. Coma ....................................................",
+    "icd_code": ""
+  },
+  {
+    "id": "218",
+    "content": "f. Functional quadriplegia ........................................................................................................ 76",
+    "condition": "f. Functional quadriplegia .................................",
+    "icd_code": ""
+  }
+]

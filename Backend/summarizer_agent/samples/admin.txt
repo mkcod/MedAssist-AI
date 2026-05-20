@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "transcript": {
+    "utterances": [
+      {
+        "utterance_id": 1,
+        "speaker_id": "speaker_2",
+        "text": "Can I reschedule my appointment to next Monday"
+      },
+      {
+        "utterance_id": 2,
+        "speaker_id": "speaker_2",
+        "text": "I also wanted to ask when my blood test report will come"
+      }
+    ]
+  }
+}

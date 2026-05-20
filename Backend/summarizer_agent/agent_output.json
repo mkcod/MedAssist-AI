@@ -1,0 +1,16 @@
+{
+    "symptoms": [
+        "insomnia",
+        "loss of appetite"
+    ],
+    "possible_condition": "Fatal familial insomnia",
+    "icd10_code": "A81.831",
+    "action_plan": [
+        "Take rest",
+        "Drink fluids",
+        "Monitor symptoms",
+        "Consult a healthcare professional if symptoms worsen"
+    ],
+    "clinical_summary": "Patient reports insomnia, loss of appetite which may indicate Fatal familial insomnia.",
+    "status": "success"
+}

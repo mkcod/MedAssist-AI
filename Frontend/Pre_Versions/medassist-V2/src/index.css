@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+
+@layer base {
+  :root {
+    --brand-primary: #1c77eb;
+    --brand-dark: #132b52;
+    --brand-teal: #14b8a6;
+    --surface: #f8faff;
+    --card: #ffffff;
+    --border: #e8effc;
+    --text-primary: #0f1f3d;
+    --text-secondary: #5a6c8a;
+    --text-muted: #9aaec4;
+    --sidebar-w: 260px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--surface);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora', sans-serif;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl border border-[#e8effc] shadow-sm;
+  }
+
+  .btn-primary {
+    @apply bg-brand-700 text-white font-medium rounded-xl px-5 py-2.5 text-sm
+           hover:bg-brand-800 active:scale-95 transition-all duration-150
+           flex items-center gap-2 shadow-sm cursor-pointer;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-[#5a6c8a] font-medium rounded-xl px-4 py-2.5 text-sm
+           hover:bg-brand-50 hover:text-brand-700 transition-all duration-150
+           flex items-center gap-2 cursor-pointer;
+  }
+
+  .sidebar-link {
+    @apply flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium
+           text-[#5a6c8a] hover:bg-brand-50 hover:text-brand-700
+           transition-all duration-150 cursor-pointer;
+  }
+
+  .sidebar-link.active {
+    @apply bg-brand-50 text-brand-700 font-semibold;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  }
+
+  .badge-green  { @apply bg-emerald-50 text-emerald-700; }
+  .badge-blue   { @apply bg-brand-50  text-brand-700; }
+  .badge-orange { @apply bg-orange-50 text-orange-700; }
+  .badge-red    { @apply bg-red-50    text-red-600; }
+  .badge-pink   { @apply bg-pink-50   text-pink-700; }
+
+  .input {
+    @apply w-full bg-[#f4f7ff] border border-[#e8effc] rounded-xl px-4 py-2.5 text-sm
+           text-[#0f1f3d] placeholder:text-[#9aaec4]
+           focus:outline-none focus:border-brand-400 focus:ring-2 focus:ring-brand-100
+           transition-all duration-150;
+  }
+
+  /* Also style select elements using .input class */
+  select.input {
+    @apply appearance-none cursor-pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%239aaec4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+  }
+
+  .stat-card {
+    @apply card p-5 flex flex-col gap-3 animate-slide-up;
+  }
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cdd8ee; border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: #a9bbdc; }
+
+/* ── Typing indicator ─────────────────────────────────────────────────────── */
+.typing-dots span {
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #9aaec4;
+  animation: bounce 1.2s ease-in-out infinite;
+}
+.typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+.typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: translateY(0); }
+  40%           { transform: translateY(-6px); }
+}
+
+/* ── Staggered entrance ──────────────────────────────────────────────────── */
+.stagger > *:nth-child(1) { animation-delay: 0.05s; }
+.stagger > *:nth-child(2) { animation-delay: 0.10s; }
+.stagger > *:nth-child(3) { animation-delay: 0.15s; }
+.stagger > *:nth-child(4) { animation-delay: 0.20s; }
+.stagger > *:nth-child(5) { animation-delay: 0.25s; }
+.stagger > *:nth-child(6) { animation-delay: 0.30s; }
+
+/* ── Mesh gradient hero ──────────────────────────────────────────────────── */
+.mesh-bg {
+  background:
+    radial-gradient(ellipse at 20% 50%, #dbeafe 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, #ccfbf1 0%, transparent 60%),
+    radial-gradient(ellipse at 60% 80%, #ede9fe 0%, transparent 50%),
+    #f8faff;
+}
+
+/* ── Prose minimal ───────────────────────────────────────────────────────── */
+.prose-sm ul { list-style: disc; padding-left: 1rem; }
+.prose-sm li { margin-bottom: 0.25rem; }
+.prose-sm strong { font-weight: 600; color: #0f1f3d; }
+.prose-sm em { font-style: italic; }

@@ -1,0 +1,7 @@
+azure-cognitiveservices-speech
+openai
+mcp
+python-dotenv
+azure-monitor-opentelemetry
+azure-keyvault-secrets
+azure-identity

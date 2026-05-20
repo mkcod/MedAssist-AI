@@ -1,0 +1,16 @@
+test2_multisymptoms.txt
+Expected: Pass. Valid medical JSON with multiple symptoms, should still generate the normal structured output.
+
+text
+{
+  "symptoms": ["fatigue", "headache", "body ache"],
+  "possible_condition": "Acute viral illness",
+  "icd10_code": "B34.9",
+  "action_plan": [
+    "Rest adequately",
+    "Increase fluid intake",
+    "Monitor temperature",
+    "Seek medical attention if symptoms worsen"
+  ],
+  "clinical_summary": "Patient reports fatigue, headache, and body ache consistent with an acute viral illness."
+}

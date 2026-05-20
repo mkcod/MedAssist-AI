@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0",
+  "session_id": "long-session-001",
+  "metadata": {
+    "source": "azure-speech-conversation-transcriber",
+    "language": "en-IN",
+    "created_at": "2026-04-16T11:20:00+05:30",
+    "audio_type": "real_time",
+    "diarization": true
+  },
+  "transcript": {
+    "utterances": [
+      {
+        "utterance_id": 1,
+        "speaker_id": "speaker_1",
+        "text": "Hello, can you tell me what has been bothering you recently?",
+        "start_time_ms": 0,
+        "duration_ms": 2100
+      },
+      {
+        "utterance_id": 2,
+        "speaker_id": "speaker_2",
+        "text": "For the last one week I have been feeling fever mostly in the evenings.",
+        "start_time_ms": 2200,
+        "duration_ms": 2800
+      },
+      {
+        "utterance_id": 3,
+        "speaker_id": "speaker_1",
+        "text": "Do you also have cough or throat pain?",
+        "start_time_ms": 5200,
+        "duration_ms": 1800
+      },
+      {
+        "utterance_id": 4,
+        "speaker_id": "speaker_2",
+        "text": "Yes, I have cough and sometimes sore throat, especially in the morning.",
+        "start_time_ms": 7100,
+        "duration_ms": 3200
+      },
+      {
+        "utterance_id": 5,
+        "speaker_id": "speaker_1",
+        "text": "Is the cough dry or are you bringing out sputum?",
+        "start_time_ms": 10400,
+        "duration_ms": 1900
+      },
+      {
+        "utterance_id": 6,
+        "speaker_id": "speaker_2",
+        "text": "It is mostly dry cough, and I also feel tired throughout the day.",
+        "start_time_ms": 12400,
+        "duration_ms": 3000
+      },
+      {
+        "utterance_id": 7,
+        "speaker_id": "speaker_1",
+        "text": "Do you have breathing difficulty or chest pain?",
+        "start_time_ms": 15500,
+        "duration_ms": 1700
+      },
+      {
+        "utterance_id": 8,
+        "speaker_id": "speaker_2",
+        "text": "No chest pain, but sometimes I feel shortness of breath when climbing stairs.",
+        "start_time_ms": 17300,
+        "duration_ms": 3200
+      },
+      {
+        "utterance_id": 9,
+        "speaker_id": "speaker_1",
+        "text": "How has your appetite been?",
+        "start_time_ms": 20600,
+        "duration_ms": 1200
+      },
+      {
+        "utterance_id": 10,
+        "speaker_id": "speaker_2",
+        "text": "I am not feeling like eating food properly for the past few days.",
+        "start_time_ms": 21900,
+        "duration_ms": 2900
+      },
+      {
+        "utterance_id": 11,
+        "speaker_id": "speaker_1",
+        "text": "Are you able to sleep well at night?",
+        "start_time_ms": 24900,
+        "duration_ms": 1300
+      },
+      {
+        "utterance_id": 12,
+        "speaker_id": "speaker_2",
+        "text": "Not really, I am not able to sleep well because of body discomfort and cough.",
+        "start_time_ms": 26300,
+        "duration_ms": 3400
+      },
+      {
+        "utterance_id": 13,
+        "speaker_id": "speaker_1",
+        "text": "Do you have headache or body pain?",
+        "start_time_ms": 29800,
+        "duration_ms": 1400
+      },
+      {
+        "utterance_id": 14,
+        "speaker_id": "speaker_2",
+        "text": "Yes, I have headache sometimes and body pain almost every day.",
+        "start_time_ms": 31300,
+        "duration_ms": 2600
+      },
+      {
+        "utterance_id": 15,
+        "speaker_id": "speaker_1",
+        "text": "Any vomiting, nausea, or loose stools?",
+        "start_time_ms": 34000,
+        "duration_ms": 1600
+      },
+      {
+        "utterance_id": 16,
+        "speaker_id": "speaker_2",
+        "text": "No vomiting and no diarrhea, but mild nausea was there yesterday.",
+        "start_time_ms": 35700,
+        "duration_ms": 2600
+      },
+      {
+        "utterance_id": 17,
+        "speaker_id": "speaker_1",
+        "text": "Did you take any medicine already?",
+        "start_time_ms": 38400,
+        "duration_ms": 1200
+      },
+      {
+        "utterance_id": 18,
+        "speaker_id": "speaker_2",
+        "text": "Only paracetamol for fever, but it comes back again by evening.",
+        "start_time_ms": 39700,
+        "duration_ms": 2500
+      },
+      {
+        "utterance_id": 19,
+        "speaker_id": "speaker_1",
+        "text": "Okay, we may need a proper evaluation if symptoms continue.",
+        "start_time_ms": 42300,
+        "duration_ms": 1700
+      },
+      {
+        "utterance_id": 20,
+        "speaker_id": "speaker_2",
+        "text": "Alright doctor, I mainly want relief from fever, cough, poor appetite, and lack of sleep.",
+        "start_time_ms": 44100,
+        "duration_ms": 3300
+      }
+    ]
+  }
+}

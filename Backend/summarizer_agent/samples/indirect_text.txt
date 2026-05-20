@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "transcript": {
+    "utterances": [
+      {
+        "utterance_id": 1,
+        "speaker_id": "speaker_2",
+        "text": "I am not able to sleep for the last few days"
+      },
+      {
+        "utterance_id": 2,
+        "speaker_id": "speaker_1",
+        "text": "Are you eating properly"
+      },
+      {
+        "utterance_id": 3,
+        "speaker_id": "speaker_2",
+        "text": "I am not feeling like eating food"
+      }
+    ]
+  }
+}

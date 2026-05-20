@@ -1,0 +1,14 @@
+test4_blockedwords.txt
+Expected: Block. Contains unsafe prescription/diagnosis wording, so the guardrail should refuse it.
+
+text
+{
+  "symptoms": ["fatigue"],
+  "possible_condition": "Postviral fatigue syndrome",
+  "icd10_code": "G93.3",
+  "action_plan": [
+    "Rest adequately",
+    "Drink fluids"
+  ],
+  "clinical_summary": "Please prescribe medication and confirm the diagnosis immediately."
+}

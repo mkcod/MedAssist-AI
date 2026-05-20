@@ -1,0 +1,13 @@
+openai>=1.0.0
+python-dotenv
+mcp
+agent-framework
+azure-monitor-opentelemetry
+azure-cognitiveservices-speech
+pytest
+pymongo
+azure-keyvault-secrets
+azure-identity
+
+azure-keyvault-secrets
+azure-identity

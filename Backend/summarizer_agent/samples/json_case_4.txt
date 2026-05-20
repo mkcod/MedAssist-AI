@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "session_id": "gastric-session-101",
+  "metadata": {
+    "source": "azure-speech-conversation-transcriber",
+    "language": "en-IN",
+    "created_at": "2026-04-17T16:10:00+05:30",
+    "audio_type": "real_time",
+    "diarization": true
+  },
+  "transcript": {
+    "utterances": [
+      {
+        "utterance_id": 1,
+        "speaker_id": "speaker_1",
+        "text": "Can you tell me what problem you are facing?",
+        "start_time_ms": 0,
+        "duration_ms": 1700
+      },
+      {
+        "utterance_id": 2,
+        "speaker_id": "speaker_2",
+        "text": "Since last night I have stomach pain and nausea.",
+        "start_time_ms": 1800,
+        "duration_ms": 2300
+      },
+      {
+        "utterance_id": 3,
+        "speaker_id": "speaker_1",
+        "text": "Did you have vomiting or loose stools?",
+        "start_time_ms": 4300,
+        "duration_ms": 1600
+      },
+      {
+        "utterance_id": 4,
+        "speaker_id": "speaker_2",
+        "text": "Yes, I vomited twice and had loose stools in the morning.",
+        "start_time_ms": 6000,
+        "duration_ms": 3000
+      },
+      {
+        "utterance_id": 5,
+        "speaker_id": "speaker_1",
+        "text": "Do you feel weak or dehydrated?",
+        "start_time_ms": 9200,
+        "duration_ms": 1500
+      },
+      {
+        "utterance_id": 6,
+        "speaker_id": "speaker_2",
+        "text": "Yes, I feel weak and I am not able to eat properly.",
+        "start_time_ms": 10800,
+        "duration_ms": 2800
+      }
+    ]
+  }
+}

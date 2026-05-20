@@ -1,0 +1,5 @@
+test5_emptyinput.txt
+Expected: Block or fail validation. Empty JSON object, so required fields are missing.
+
+text
+{}

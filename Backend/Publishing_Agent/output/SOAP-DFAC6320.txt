@@ -1,0 +1,25 @@
+================================================================
+MEDASSIST SOAP CLINICAL DOCUMENT
+================================================================
+Record ID      : SOAP-DFAC6320
+Generated Time : 2026-04-21T07:05:14.747906Z
+Confidence     : 86.0
+
+S - SUBJECTIVE
+----------------------------------------------------------------
+Patient reports fatigue.
+
+O - OBJECTIVE
+----------------------------------------------------------------
+Clinical summary: Patient reports fatigue consistent with postviral fatigue syndrome.
+
+A - ASSESSMENT
+----------------------------------------------------------------
+Symptoms and context suggest a possible clinical picture related to Postviral fatigue syndrome (reference code: G93.3) without confirming a diagnosis.
+
+P - PLAN
+----------------------------------------------------------------
+Rest adequately ; Drink fluids ; Monitor symptoms ; Consult a healthcare professional if symptoms persist
+
+Clinical note generated from validated SOAP JSON output for doctor review.
+================================================================

@@ -1,0 +1,14 @@
+test3_missingfields.txt
+Expected: Block or fail validation. Missing icd10_code, so the guardrail should reject it as incomplete JSON.
+
+text
+{
+  "symptoms": ["fatigue"],
+  "possible_condition": "Postviral fatigue syndrome",
+  "action_plan": [
+    "Rest adequately",
+    "Drink fluids",
+    "Monitor symptoms"
+  ],
+  "clinical_summary": "Patient reports fatigue consistent with postviral fatigue syndrome."
+}

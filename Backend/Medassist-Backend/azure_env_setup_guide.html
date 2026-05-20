@@ -1,0 +1,596 @@
+<h2 class="sr-only">Step by step guide to find Azure values and update .env file</h2>
+<style>
+  :root {
+    --bg-main: #0f172a;
+    --bg-card: #111827;
+    --bg-soft: #1f2937;
+    --bg-hover: #374151;
+
+    --text-primary: #f9fafb;
+    --text-secondary: #9ca3af;
+
+    --border: #374151;
+    --border-light: #4b5563;
+
+    --blue: #3b82f6;
+    --green: #10b981;
+    --yellow: #f59e0b;
+  }
+
+  /* Reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: var(--bg-main);
+    color: var(--text-primary);
+    font-family: "Inter", sans-serif;
+    padding: 20px;
+  }
+
+  /* Tabs */
+  .tab-bar {
+    display: flex;
+    gap: 6px;
+    background: var(--bg-soft);
+    padding: 6px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .tab {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .tab:hover {
+    background: var(--bg-hover);
+  }
+
+  .tab.active {
+    background: var(--bg-card);
+    color: white;
+    border: 1px solid var(--border-light);
+  }
+
+  /* Panels */
+  .panel {
+    display: none;
+  }
+
+  .panel.active {
+    display: block;
+  }
+
+  /* Card */
+  .step-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    transition: 0.2s;
+  }
+
+  .step-card:hover {
+    border-color: var(--border-light);
+  }
+
+  /* Header */
+  .step-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .step-num {
+    width: 28px;
+    height: 28px;
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .step-title {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  /* Navigation path */
+  .nav-path {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  .nav-item {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+  }
+
+  .nav-arrow {
+    font-size: 11px;
+    color: var(--text-secondary);
+  }
+
+  /* Copy box */
+  .copy-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  .copy-label {
+    font-size: 11px;
+    color: var(--text-secondary);
+  }
+
+  .copy-value {
+    font-family: monospace;
+    font-size: 12px;
+    color: #60a5fa;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+
+  .copy-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 6px 10px;
+    font-size: 11px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .copy-btn:hover {
+    background: var(--bg-hover);
+  }
+
+  /* Tips */
+  .tip {
+    background: rgba(245, 158, 11, 0.1);
+    border-left: 3px solid var(--yellow);
+    padding: 10px;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .success {
+    background: rgba(16, 185, 129, 0.1);
+    border-left: 3px solid var(--green);
+    padding: 10px;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  /* Image mock */
+  .img-mock {
+    background: var(--bg-soft);
+    border: 1px dashed var(--border-light);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+  }
+
+  .img-row {
+    display: flex;
+    gap: 10px;
+    margin: 6px 0;
+  }
+
+  .img-label {
+    width: 140px;
+    font-size: 11px;
+    color: var(--text-secondary);
+  }
+
+  .img-val {
+    flex: 1;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 11px;
+  }
+
+  /* Highlight */
+  .highlight {
+    border: 2px solid var(--blue) !important;
+    color: #60a5fa !important;
+  }
+
+  /* ENV block */
+  .env-block {
+    background: #020617;
+    padding: 16px;
+    border-radius: 12px;
+    font-family: monospace;
+    font-size: 12px;
+  }
+
+  .env-line {
+    line-height: 1.7;
+  }
+
+  .env-key {
+    color: #60a5fa;
+  }
+
+  .env-eq {
+    color: #9ca3af;
+  }
+
+  .env-val {
+    color: #fca5a5;
+  }
+
+  .env-comment {
+    color: #4ade80;
+  }
+
+  .env-section {
+    color: #c084fc;
+  }
+
+  /* Divider */
+  .separator {
+    height: 1px;
+    background: var(--border);
+    margin: 16px 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .tab {
+      font-size: 11px;
+      padding: 8px;
+    }
+
+    .step-title {
+      font-size: 13px;
+    }
+
+    .copy-box {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<div class="tab-bar">
+  <button class="tab active" onclick="showTab('storage')">1. Storage Account</button>
+  <button class="tab" onclick="showTab('keyvault')">2. Key Vault</button>
+  <button class="tab" onclick="showTab('appservice')">3. App Service</button>
+  <button class="tab" onclick="showTab('cosmos')">4. Cosmos DB</button>
+  <button class="tab" onclick="showTab('finalenv')">5. Final .env</button>
+</div>
+
+<!-- STORAGE -->
+<div class="panel active" id="panel-storage">
+  <div class="step-card">
+    <div class="step-header">
+      <div class="step-num">1</div>
+      <div class="step-title">Storage Account — Connection String எடுக்க</div>
+    </div>
+    <div class="nav-path">
+      <span class="nav-item">Azure Portal</span><span class="nav-arrow">›</span>
+      <span class="nav-item">Storage Accounts</span><span class="nav-arrow">›</span>
+      <span class="nav-item">உங்கள் account பெயர்</span><span class="nav-arrow">›</span>
+      <span class="nav-item">Security + networking</span><span class="nav-arrow">›</span>
+      <span class="nav-item">Access keys</span>
+    </div>
+    <div class="img-mock">
+      <div class="img-row"><span class="img-label">Storage account name</span><span
+          class="img-val">youraccountname</span></div>
+      <div class="img-row"><span class="img-label">key1 → Connection string</span><span class="img-val highlight"
+          style="color:#378ADD">DefaultEndpointsProtocol=https;AccountName=... ← இதை copy பண்ணுங்க</span></div>
+    </div>
+    <div class="copy-box">
+      <div>
+        <div class="copy-label">உங்கள் .env-ல இப்படி paste பண்ணுங்க:</div>
+        <div class="copy-value">
+          AZURE_STORAGE_CONNECTION_STRING=DefaultEndpointsProtocol=https;AccountName=<b>yourname</b>;AccountKey=<b>yourkey==</b>;EndpointSuffix=core.windows.net
+        </div>
+      </div>
+    </div>
+    <div class="tip">⚠ "Show" button click பண்ணி key1-ன் full connection string copy பண்ணுங்க — AccountKey= முடியும் வரை
+      முழுசா copy பண்ணணும்</div>
+  </div>
+
+  <div class="step-card">
+    <div class="step-header">
+      <div class="step-num">2</div>
+      <div class="step-title">Container Name — default ஆக நாம் set பண்ணிருக்கோம்</div>
+    </div>
+    <div class="copy-box">
+      <div>
+        <div class="copy-label">இந்த value change பண்ண வேண்டாம் — default use பண்ணலாம்:</div>
+        <div class="copy-value">AZURE_STORAGE_CONTAINER_NAME=medassist-files</div>
+      </div>
+    </div>
+    <div class="success">✓ Storage Account-ல manually ஒரு container create பண்ண வேண்டாம் — backend first run-ல
+      automatically create பண்ணும்</div>
+  </div>
+</div>
+
+<!-- KEY VAULT -->
+<div class="panel" id="panel-keyvault">
+  <div class="step-card">
+    <div class="step-header">
+      <div class="step-num">1</div>
+      <div class="step-title">Key Vault URI எடுக்க</div>
+    </div>
+    <div class="nav-path">
+      <span class="nav-item">Azure Portal</span><span class="nav-arrow">›</span>
+      <span class="nav-item">Key Vaults</span><span class="nav-arrow">›</span>
+      <span class="nav-item">உங்கள் vault பெயர்</span><span class="nav-arrow">›</span>
+      <span class="nav-item">Overview</span>
+    </div>
+    <div class="img-mock">
+      <div class="img-row"><span class="img-label">Vault URI</span><span class="img-val highlight"
+          style="color:#378ADD">https://yourkeyvault.vault.azure.net/ ← இதை copy</span></div>
+    </div>
+    <div class="copy-box">
+      <div>
+        <div class="copy-label">.env-ல:</div>
+        <div class="copy-value">AZURE_KEY_VAULT_URI=https://<b>yourkeyvaultname</b>.vault.azure.net/</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step-card">
+    <div class="step-header">
+      <div class="step-num">2</div>
+      <div class="step-title">App Service-க்கு Key Vault Access கொடுக்க (முக்கியம்!)</div>
+    </div>
+    <p style="font-size:12px;color:var(--color-text-secondary);margin-bottom:10px;">Azure App Service-ல deploy பண்ணும்
+      போது, App Service-க்கு Managed Identity enable பண்ணி Key Vault access கொடுக்கணும்:</p>
+    <div class="nav-path">
+      <span class="nav-item">App Service</span><span class="nav-arrow">›</span>
+      <span class="nav-item">Settings</span><span class="nav-arrow">›</span>
+      <span class="nav-item">Identity</span><span class="nav-arrow">›</span>
+      <span class="nav-item">System assigned</span><span class="nav-arrow">›</span>
+      <span class="nav-item">Status: ON</span><span class="nav-arrow">›</span>
+      <span class="nav-item">Save</span>
+    </div>
+    <div style="margin-top:8px" class="nav-path">
+      <span class="nav-item">Key Vault</span><span class="nav-arrow">›</span>
+      <span class="nav-item">Access control (IAM)</span><span class="nav-arrow">›</span>
+      <span class="nav-item">+ Add role assignment</span><span class="nav-arrow">›</span>
+      <span class="nav-item">Key Vault Secrets User</span><span class="nav-arrow">›</span>
+      <span class="nav-item">உங்கள் App Service select</span>
+    </div>
+    <div class="success">✓ இது பண்ணி முடிச்சதும் local dev-ல AZURE_TENANT_ID, CLIENT_ID, CLIENT_SECRET வேண்டாம் — App
+      Service automatically access பெறும்</div>
+  </div>
+
+  <div class="step-card">
+    <div class="step-header">
+      <div class="step-num">3</div>
+      <div class="step-title">Local Development மட்டும் — Service Principal (optional)</div>
+    </div>
+    <p style="font-size:12px;color:var(--color-text-secondary);margin-bottom:8px;">Local-ல Key Vault test பண்ண வேண்டும்
+      என்றால் மட்டும் இந்த values தேவை:</p>
+    <div class="nav-path">
+      <span class="nav-item">Azure Active Directory</span><span class="nav-arrow">›</span>
+      <span class="nav-item">App registrations</span><span class="nav-arrow">›</span>
+      <span class="nav-item">New registration</span>
+    </div>
+    <div class="copy-box">
+      <div>
+        <div class="copy-label">App registration Overview page-ல:</div>
+        <div class="copy-value">AZURE_TENANT_ID=<b>Directory (tenant) ID value</b></div>
+        <div class="copy-value" style="margin-top:4px">AZURE_CLIENT_ID=<b>Application (client) ID value</b></div>
+      </div>
+    </div>
+    <div class="tip">⚠ Local dev-ல Key Vault தேவையில்லை என்றால் இந்த 3 values blank விடலாம் — backend automatically
+      .env-ல உள்ள values use பண்ணும்</div>
+  </div>
+</div>
+
+<!-- APP SERVICE -->
+<div class="panel" id="panel-appservice">
+  <div class="step-card">
+    <div class="step-header">
+      <div class="step-num">1</div>
+      <div class="step-title">App Service URL எடுக்க (FRONTEND_URL-க்கு)</div>
+    </div>
+    <div class="nav-path">
+      <span class="nav-item">App Services</span><span class="nav-arrow">›</span>
+      <span class="nav-item">உங்கள் backend app</span><span class="nav-arrow">›</span>
+      <span class="nav-item">Overview</span>
+    </div>
+    <div class="img-mock">
+      <div class="img-row"><span class="img-label">Default domain</span><span class="img-val highlight"
+          style="color:#378ADD">yourapp.azurewebsites.net ← இதை copy</span></div>
+    </div>
+    <div class="copy-box">
+      <div>
+        <div class="copy-label">Backend .env-ல (frontend URL கொடுக்க — CORS-க்கு):</div>
+        <div class="copy-value">FRONTEND_URL=https://<b>yourfrontend</b>.azurewebsites.net</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step-card">
+    <div class="step-header">
+      <div class="step-num">2</div>
+      <div class="step-title">App Service Environment Variables set பண்ண</div>
+    </div>
+    <p style="font-size:12px;color:var(--color-text-secondary);margin-bottom:8px;">Deploy பண்ண App Service-ல .env file
+      upload பண்ண வேண்டாம் — Portal-லயே set பண்ணலாம்:</p>
+    <div class="nav-path">
+      <span class="nav-item">App Service</span><span class="nav-arrow">›</span>
+      <span class="nav-item">Settings</span><span class="nav-arrow">›</span>
+      <span class="nav-item">Environment variables</span><span class="nav-arrow">›</span>
+      <span class="nav-item">+ Add</span>
+    </div>
+    <div class="success">✓ .env file-ல உள்ள ஒவ்வொரு key=value-ஐயும் இங்க add பண்ணுங்க. App Service restart ஆனா
+      automatically எடுத்துக்கும்.</div>
+  </div>
+
+  <div class="step-card">
+    <div class="step-header">
+      <div class="step-num">3</div>
+      <div class="step-title">Frontend .env — Backend URL update பண்ண</div>
+    </div>
+    <div class="copy-box">
+      <div>
+        <div class="copy-label">medassist-frontend/.env file-ல:</div>
+        <div class="copy-value">VITE_API_URL=https://<b>yourbackend</b>.azurewebsites.net/api</div>
+        <div class="copy-value" style="margin-top:4px">VITE_SOCKET_URL=https://<b>yourbackend</b>.azurewebsites.net
+        </div>
+      </div>
+    </div>
+    <div class="tip">⚠ Frontend build பண்றதுக்கு முன்னாடி இந்த values update பண்ணணும் — Vite build time-ல இந்த values
+      embed ஆகும்</div>
+  </div>
+</div>
+
+<!-- COSMOS DB -->
+<div class="panel" id="panel-cosmos">
+  <div class="step-card">
+    <div class="step-header">
+      <div class="step-num">1</div>
+      <div class="step-title">Cosmos DB (MongoDB API) Connection String எடுக்க</div>
+    </div>
+    <div class="nav-path">
+      <span class="nav-item">Azure Portal</span><span class="nav-arrow">›</span>
+      <span class="nav-item">Azure Cosmos DB</span><span class="nav-arrow">›</span>
+      <span class="nav-item">உங்கள் account</span><span class="nav-arrow">›</span>
+      <span class="nav-item">Settings</span><span class="nav-arrow">›</span>
+      <span class="nav-item">Connection strings</span>
+    </div>
+    <div class="img-mock">
+      <div class="img-row"><span class="img-label">Primary Connection String</span><span class="img-val highlight"
+          style="color:#378ADD">mongodb://youracccount:key@youracccount.mongo.cosmos... ← இதை copy</span></div>
+    </div>
+    <div class="copy-box">
+      <div>
+        <div class="copy-label">.env-ல:</div>
+        <div class="copy-value">
+          COSMOS_DB_CONNECTION_STRING=mongodb://<b>account</b>:<b>key</b>@<b>account</b>.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000
+        </div>
+      </div>
+    </div>
+    <div class="tip">⚠ Cosmos DB create பண்ணும் போது "MongoDB API" select பண்ணிருக்கீங்களா என்று confirm பண்ணுங்க — SQL
+      API இருந்தா connection string வேற மாதிரி இருக்கும்</div>
+  </div>
+
+  <div class="step-card">
+    <div class="step-header">
+      <div class="step-num">2</div>
+      <div class="step-title">Database Name</div>
+    </div>
+    <div class="copy-box">
+      <div>
+        <div class="copy-label">இந்த value as-is வையுங்க:</div>
+        <div class="copy-value">COSMOS_DB_NAME=medassist</div>
+      </div>
+    </div>
+    <div class="success">✓ Database automatically create ஆகும் — Cosmos DB-ல manually create பண்ண வேண்டாம்.
+      <code>npm run seed</code> run பண்ணும் போது collections எல்லாம் create ஆகும்.
+    </div>
+  </div>
+</div>
+
+<!-- FINAL ENV -->
+<div class="panel" id="panel-finalenv">
+  <div class="step-card">
+    <div class="step-header">
+      <div class="step-num">✓</div>
+      <div class="step-title">Complete .env file — உங்கள் values paste பண்ணுங்க</div>
+    </div>
+    <div class="env-block">
+      <div class="env-line"><span class="env-comment"># ── Server ──────────────────────────────────</span></div>
+      <div class="env-line"><span class="env-key">PORT</span><span class="env-eq">=</span><span
+          class="env-val">5000</span></div>
+      <div class="env-line"><span class="env-key">NODE_ENV</span><span class="env-eq">=</span><span
+          class="env-val">production</span></div>
+      <div class="env-line">&nbsp;</div>
+      <div class="env-line"><span class="env-comment"># ── JWT ─────────────────────────────────────</span></div>
+      <div class="env-line"><span class="env-key">JWT_SECRET</span><span class="env-eq">=</span><span
+          class="env-val">CHANGE_THIS_to_any_long_random_string_32chars</span></div>
+      <div class="env-line"><span class="env-key">JWT_EXPIRES_IN</span><span class="env-eq">=</span><span
+          class="env-val">7d</span></div>
+      <div class="env-line">&nbsp;</div>
+      <div class="env-line"><span class="env-comment"># ── Azure Cosmos DB (Tab 4-ல இருந்து) ──────</span></div>
+      <div class="env-line"><span class="env-key">COSMOS_DB_CONNECTION_STRING</span><span class="env-eq">=</span><span
+          class="env-val">mongodb://YOUR_ACCOUNT:YOUR_KEY@YOUR_ACCOUNT.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000</span>
+      </div>
+      <div class="env-line"><span class="env-key">COSMOS_DB_NAME</span><span class="env-eq">=</span><span
+          class="env-val">medassist</span></div>
+      <div class="env-line">&nbsp;</div>
+      <div class="env-line"><span class="env-comment"># ── Azure Storage (Tab 1-ல இருந்து) ────────</span></div>
+      <div class="env-line"><span class="env-key">AZURE_STORAGE_CONNECTION_STRING</span><span
+          class="env-eq">=</span><span
+          class="env-val">DefaultEndpointsProtocol=https;AccountName=YOUR_ACCOUNT;AccountKey=YOUR_KEY==;EndpointSuffix=core.windows.net</span>
+      </div>
+      <div class="env-line"><span class="env-key">AZURE_STORAGE_CONTAINER_NAME</span><span class="env-eq">=</span><span
+          class="env-val">medassist-files</span></div>
+      <div class="env-line">&nbsp;</div>
+      <div class="env-line"><span class="env-comment"># ── Azure Key Vault (Tab 2-ல இருந்து) ──────</span></div>
+      <div class="env-line"><span class="env-key">AZURE_KEY_VAULT_URI</span><span class="env-eq">=</span><span
+          class="env-val">https://YOUR_KEYVAULT_NAME.vault.azure.net/</span></div>
+      <div class="env-line">&nbsp;</div>
+      <div class="env-line"><span class="env-comment"># ── Local dev மட்டும் (optional) ────────────</span></div>
+      <div class="env-line"><span class="env-key">AZURE_TENANT_ID</span><span class="env-eq">=</span><span
+          class="env-val">leave_blank_if_using_App_Service_Managed_Identity</span></div>
+      <div class="env-line"><span class="env-key">AZURE_CLIENT_ID</span><span class="env-eq">=</span><span
+          class="env-val">leave_blank_if_using_App_Service_Managed_Identity</span></div>
+      <div class="env-line"><span class="env-key">AZURE_CLIENT_SECRET</span><span class="env-eq">=</span><span
+          class="env-val">leave_blank_if_using_App_Service_Managed_Identity</span></div>
+      <div class="env-line">&nbsp;</div>
+      <div class="env-line"><span class="env-comment"># ── CORS (Tab 3-ல இருந்து) ──────────────────</span></div>
+      <div class="env-line"><span class="env-key">FRONTEND_URL</span><span class="env-eq">=</span><span
+          class="env-val">https://YOUR_FRONTEND_APP.azurewebsites.net</span></div>
+      <div class="env-line">&nbsp;</div>
+      <div class="env-line"><span class="env-comment"># ── OpenAI (optional) ───────────────────────</span></div>
+      <div class="env-line"><span class="env-key">OPENAI_API_KEY</span><span class="env-eq">=</span><span
+          class="env-val">sk-your_key_here</span></div>
+    </div>
+    <div
+      style="margin-top:12px;background:var(--color-background-success);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:10px 12px;font-size:12px;color:var(--color-text-success);">
+      ✓ .env file ready ஆனதும்: <code
+        style="background:rgba(0,0,0,0.1);padding:1px 5px;border-radius:3px;">npm run seed</code> run பண்ணுங்க → DB-ல
+      demo data create ஆகும் → <code
+        style="background:rgba(0,0,0,0.1);padding:1px 5px;border-radius:3px;">npm run dev</code> start பண்ணுங்க
+    </div>
+  </div>
+</div>
+
+<script>
+  function showTab(name) {
+    document.querySelectorAll('.tab').forEach((t, i) => {
+      const panels = ['storage', 'keyvault', 'appservice', 'cosmos', 'finalenv']
+      t.classList.toggle('active', panels[i] === name)
+    })
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'))
+    document.getElementById('panel-' + name).classList.add('active')
+  }
+</script>
